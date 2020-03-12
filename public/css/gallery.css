@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=East+Sea+Dokdo");
+
+figure {
+  width: 85%;
+  border: 2px #F0EFF0;
+  min-width: 250px;
+  background-color: rgb(252, 250, 255);
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: 0 5px 10px #0002;
+  align-items: center;
+}
+
+figure:hover
+{
+  transform: scale(1.05) skewY(-1deg);
+}
+img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 5px 10px #0002;
+}
+
+
+figcaption {
+  font-family: "East Sea Dokdo", cursive;
+  height: 2.5em;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 636px) and (max-width: 960px) {
+  figure {
+    width: 40%;
+    margin: 2%;
+    float: left;
+  }
+  figcaption {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 961px) {
+  figure {
+    width: 27%;
+    float: left;
+    margin: 1% 1%;
+  }
+  figcaption {
+    font-size: 1.4em;
+  }
+}

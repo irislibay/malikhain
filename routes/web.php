@@ -23,6 +23,14 @@ Route::get('/workshop', function(){
     return view('workshop');
 });
 
+Route::get('/workshop/styletransferArt', function(){
+    return view('styletransferArt');
+});
+
+Route::get('/workshop/styletransferPoem', function(){
+    return view('styletransferPoem');
+});
+
 Route::get('/Gallery', function () {
     return view('Gallery');
 });
@@ -33,6 +41,3 @@ Route::get('/ArtistPage', function () {
     return view('ArtistPage');
 });
 
-Route::get('/workshop/ArtStyleFusion', function(){
-    return view('ArtStyleFusion');
-});
