@@ -41,3 +41,7 @@ Route::get('/ArtistPage', function () {
     return view('ArtistPage');
 });
 
+Route::get('/ArtistPage/individual', function () {
+    return view('individual');
+});
+

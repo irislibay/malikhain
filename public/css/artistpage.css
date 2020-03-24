@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Comfortaa|Jacques+Francois+Shadow|Rock+Salt|Questrial|Reenie+Beanie:300,400,500,600,700");
-  
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display|Special+Elite|Questrial|Reenie+Beanie:300,400,500,600,700");
+
+
 #card .content {
     display: flex;
     margin: 0 auto;
@@ -52,6 +53,7 @@
     transform-style: preserve-3d;
     transition: ease-in-out 600ms;
     box-sizing: border-box;
+    box-shadow: 0 5px 10px #0002;
   }
 #card .front {
     background-size: cover;
@@ -60,7 +62,10 @@
     font-weight: 600;
     color: #fff;
     overflow: hidden;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Major Mono Display', monospace;
+    text-shadow: -1px -1px 0px #D1CFCE,
+    3px 3px 0px #6c6c6c,
+    6px 6px 0px #454445;
   }
 #card .front:before {
     position: absolute;
@@ -70,7 +75,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #F78FAD, #FDEB82);
+    background: linear-gradient(135deg,#845EC2,#FFC75F);
     opacity: 0.25;
     z-index: -1;
   }

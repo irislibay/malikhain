@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Jacques+Francois+Shadow|Megrim|Nanum+Pen+Script|Questrial|Reenie+Beanie|Rock+Salt:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Baumans|Abel|Megrim|Major+Mono+Display|Questrial|Montserrat+Subrayada|Rock+Salt:300,400,500,600,700");
 
 
 html, body
@@ -10,10 +10,10 @@ body
 {
 	margin: 0px;
 	padding: 0px;
-	background: linear-gradient(-50deg, #57385C, #A75265 , #FEBE7E, #FFEDBC);
+	background: linear-gradient(-50deg, #2C73D2 , #845EC2,#0089BA, #008F7A);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	font-family: "Questrial", sans-serif;
+	animation: gradient 10s ease infinite;
+	font-family: "Baumans", cursive;
 	font-size: 12pt;
 	font-weight: 300;
 	color: #57385C;
@@ -31,12 +31,25 @@ body
 	}
 }
 
-h1, h2, h3
+h1, h3
 {
 	margin: 0;
 	padding: 0;
 	font-weight: 600;
 	color: #A75265;
+}
+
+h2
+{
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+	font-family: 'Megrim', cursive;
+	color: white;
+
+	text-shadow: -1px -1px 0px #D1CFCE,
+    3px 3px 0px #6c6c6c,
+    6px 6px 0px #454445;
 }
 
 p, ol, ul
@@ -281,7 +294,8 @@ ul.contact li a.icon-rss:before
 {
 	display: inline-block;
 	padding: 1.3em 3em;
-	background: linear-gradient(-40deg , #9D2E7D, #E16E93,#E13680, #A43AB2);
+	border-radius: 100px;
+	background: linear-gradient(-40deg , #F78FAD, #FDEB82,#D279EE, #F8C390);
 	background-size: 400% 400%;
 	-moz-transition: opacity 0.25s ease-in-out;
 	-webkit-transition: opacity 0.25s ease-in-out;
@@ -298,7 +312,7 @@ ul.contact li a.icon-rss:before
 .btn:hover
 {
 	animation: gradient 12s ease infinite;
-	background: linear-gradient(-40deg , #F78FAD, #FDEB82,#D279EE, #F8C390);
+	background: linear-gradient(-40deg , #9D2E7D, #E16E93,#E13680, #A43AB2);
 	background-size: 400% 400%;
 	animation: gradient 12s ease infinite;
 	color: white;
@@ -338,6 +352,7 @@ ul.contact li a.icon-rss:before
 	font-weight: 400;
 	font-size: 1.1em;
 	color: #6F6F6F;
+	font-family: 'Major Mono Display', cursive;
 }
 
 /*********************************************************************************/
@@ -392,7 +407,7 @@ ul.contact li a.icon-rss:before
 
 #logo .fa
 {
-	color: #964F4c;
+	color:  #F8C390;
 }
 
 #logo .fa:after
@@ -639,6 +654,58 @@ ul.contact li a.icon-rss:before
 }
 
 /*********************************************************************************/
+/* Particle BG                                                                   */
+/*********************************************************************************/
+
+#particles-js
+{ 
+	position: absolute; 
+	width: 180%; 
+	height: 180%; 
+	background-color: #845ec2; 
+	background-image: url(""); 
+	background-repeat: no-repeat; 
+	background-size: 400% 400%; 
+	background-position: 50% 50%; 
+} 
+	
+	/* ---- stats.js ---- */ 
+	.count-particles
+	{ background: #000022; 
+		position: absolute; 
+		top: 48px; 
+		left: 0; 
+		width: 80px; 
+		color: #13E8E9; 
+		font-size: .8em; 
+		text-align: left; 
+		text-indent: 4px; 
+		line-height: 14px; 
+		padding-bottom: 2px; 
+		font-family: Helvetica, Arial, sans-serif; 
+		font-weight: bold; 
+	} 
+	.js-count-particles
+	{ 
+		font-size: 1.1em; 
+	} 
+	#stats, .count-particles
+	{ 
+		-webkit-user-select: none; 
+		margin-top: 5px; 
+		margin-left: 5px;
+	} 
+	#stats
+	{ 
+		border-radius: 3px 3px 0 0; 
+		overflow: hidden; 
+	} 
+	.count-particles
+	{ 
+		border-radius: 0 0 3px 3px; 
+	}
+
+/*********************************************************************************/
 /* Featured                                                                      */
 /*********************************************************************************/
 
@@ -646,9 +713,10 @@ ul.contact li a.icon-rss:before
 {
 	overflow: hidden;
 	padding: 10em 0em;
-	background: linear-gradient(-50deg,  rgb(248, 214, 248),#F0EFF0 , #F1EEF9);
+	/* background: linear-gradient(-50deg,  rgb(248, 214, 248),#F0EFF0 , #F1EEF9);
 	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 15s ease infinite; */
+	background-size: 400% 400%;
 	text-align: center;
 }
 
@@ -678,7 +746,7 @@ ul.contact li a.icon-rss:before
 	width: 3em;
 	height: 2em;
 	font-size: 4em;
-	color: #A75265;
+	color: #F8C390;
 }
 
 .column1,  .column2,  .column3,  .column4
@@ -954,13 +1022,25 @@ ul.contact li a.icon-rss:before
 #wel
 {
 	padding: 5em 0em;
-	background: #3D3536;
-	text-align: center;
+	background: linear-gradient(-50deg,  #2C73D2 ,#845EC2,#0089BA, #008F7A);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	text-align: right;
 }
 
+#wel .logo
+{
+	position: absolute;
+	/* display: block;
+	text-indent: -9999px; */ 
+	width: 472.4px;
+	height: 340px;
+	background-image: url(/images/artificial_intelligence.svg);
+	/* background-size: 100px 82px; */
+}
 #wel a
 {
-	color:#57385C;
+	color: white;
 }
 
 #wel h2
@@ -969,33 +1049,23 @@ ul.contact li a.icon-rss:before
 	font-weight: 400;
 	font-size: 3em;
 	color: #A75265;
+	text-align: right;
 }
 
 #wel .btn
 {
 	margin-top: 2em;
-	background: linear-gradient(-40deg , #9D2E7D, #E16E93,#E13680, #A43AB2);
+	margin-right: 2em;
+	border-radius: 12px;
+	background: linear-gradient(-40deg , #F78FAD, #FDEB82,#D279EE, #F8C390);
 	background-size: 400% 400%;
-	animation: gradient 12s ease infinite;
 	color: #FFF;
 }
 
 #wel .btn:hover
 {
-	background: linear-gradient(-40deg , #F78FAD, #FDEB82,#D279EE, #F8C390);
+	background: linear-gradient(-40deg , #9D2E7D, #E16E93,#E13680, #A43AB2);
 	background-size: 400% 400%;
-	animation: gradient 12s ease infinite;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
 
 #wel strong

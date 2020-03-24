@@ -6,7 +6,7 @@
 	<div id="featured" class="extra2 margin-btm tray">
 		<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
 			<h2>Exhibit</h2>
-				<span class="byline">Style-content-fused works using artificial intelligence</span> </div>
+				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span> </div>
 				<div>
 					<figure class="wiggly wiggle2">
 							<img src="/images/amorsolo-iris2.png" alt="Wassily Kandinsky: Untitled 1929">
