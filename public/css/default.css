@@ -86,12 +86,78 @@ a:hover
 	width: 1200px;
 }
 
+/*********************************************************************************/
+/* Select Box                                                                    */
+/*********************************************************************************/
+
+select {
+	margin-bottom: 1em;
+	padding: 0.25em;
+	border: 0;
+	border-bottom: 2px solid currentcolor;
+	font-weight: bold;
+	letter-spacing: 0.15em;
+	border-radius: 0;
+}
+select:focus, select:active {
+	outline: 0;
+	border-bottom-color: red;
+}
+.images {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px 3px 3px 3px;
+	overflow: hidden;
+	box-shadow: 0 20px 15px -15px rgba(0, 0, 0, .5);
+}
+.images img, .images .loader, .images .no-selection {
+	display: none;
+	letter-spacing: 0.15em;
+	font-weight: bold;
+}
+.images[data-selected=""]:not(.loading) {
+	background: #eee;
+}
+.images[data-selected=""]:not(.loading) .no-selection {
+	display: block;
+}
+.images.loading {
+	background: #eee;
+}
+.images.loading .loader {
+	display: block;
+	animation: loading 1.5s linear;
+}
+.images[data-selected="1"] img[data-image="1"] {
+	display: block;
+}
+.images[data-selected="2"] img[data-image="2"] {
+	display: block;
+}
+.images[data-selected="3"] img[data-image="3"] {
+	display: block;
+}
+.images[data-selected="4"] img[data-image="4"] {
+	display: block;
+}
+.images[data-selected="5"] img[data-image="5"] {
+	display: block;
+}
+@keyframes loading {
+	to {
+		letter-spacing: 0.25em;
+   }
+}
+
 
 /*********************************************************************************/
 /* List Styles                                                                   */
 /*********************************************************************************/
 
-	ul.style1
+ul.style1
 {
 	margin: 0;
 	padding: 0em 0em 0em 0em;

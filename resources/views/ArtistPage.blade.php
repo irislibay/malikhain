@@ -14,8 +14,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>National Artist.</p>
+							<p>A Filipino painter of Chinese descent and was a National Artist for Visual Arts.</p><button class="button">Know more</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
@@ -24,8 +24,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>National hero of the Filipino people.</p>
+							<p>An ophthalmologist by profession, a writer, and a key member of the Filipino Propaganda Movement.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
@@ -34,8 +34,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>World-renowned artist.</p>
+							<p>Gold-medalist in 1884 Madrid Exposition of Fine Arts.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="/ArtistPage/individual">
@@ -44,8 +44,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>Creator of cultural touchstone.</p>
+							<p>He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. </p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
@@ -54,8 +54,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>The folk artist.</p>
+							<p>He has contributed more than 24 designs for reproduction on UNICE’s greeting cards and are distributed worldwide.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
@@ -64,8 +64,8 @@
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>TOYM-awardee. <br>(Ten Outstanding Young Men)</p>
+							<p>Pacita Abad became the first woman ever to receive this prestigious award.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a>

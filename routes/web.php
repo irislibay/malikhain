@@ -31,11 +31,10 @@ Route::get('/workshop/styletransferPoem', function(){
     return view('styletransferPoem');
 });
 
-Route::get('/Gallery', function () {
-    return view('Gallery');
-});
-
-Route::get('/Gallery/{post}', 'ProjectsController@show');
+// Route::get('/Gallery', function () {
+//     return view('Gallery');
+// });
+Route::get('/Gallery', 'FileController@index')->name('index');
 
 Route::get('/ArtistPage', function () {
     return view('ArtistPage');
@@ -44,4 +43,8 @@ Route::get('/ArtistPage', function () {
 Route::get('/ArtistPage/individual', function () {
     return view('individual');
 });
+
+Route::resource('file', 'FileController');
+Route::resource('posts', 'PostsController');
+
 

@@ -40,6 +40,7 @@ Released   : 20140124
                 </div>
             </div>
     </div>
+    
         @yield('content')
 
         
