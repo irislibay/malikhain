@@ -1,8 +1,9 @@
 <html>
     <head>
     <link rel = "stylesheet" href="{{ mix('/css/app.css')  }}" />
-        <link href="/css/default.css" rel="stylesheet"/>
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="/css/indivArtistpage.css" rel="stylesheet"/>
+    <link href="/css/default.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
 
@@ -21,7 +22,7 @@
                 </div>
             </div>
     </div>
-    
+ 
         @yield('content')
 
         <div id="copyright" class="tray">
