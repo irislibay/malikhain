@@ -10,3 +10,13 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+models
+scripts/venv
+scripts/env
+scripts/.venv
+scripts/.env
+/public/uploads
+/public/output
+
+.idea
