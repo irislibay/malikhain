@@ -26,6 +26,7 @@ import cv2
 import copy
 import os
 import sys
+import time
 
 # %%
 # Hyperparameters
@@ -47,7 +48,8 @@ PIXEL_CLIP = 'True' # or False - Clipping produces better images
 CONTENT_PATH = ''
 STYLE_PATH = ''
 ROOT_DIRECTORY = os.getenv('ROOT_DIR', '.')
-OUTPUT_DIRECTORY = ROOT_DIRECTORY + '/output'
+OUTPUT_DIRECTORY = ROOT_DIRECTORY + '/output_image'
+OUTPUT_FILENAME = str(int(time.time()))
 
 """
 PRETRAINED VGG MODELS
@@ -55,26 +57,18 @@ GITHUB REPO: https://github.com/jcjohnson/pytorch-vgg
 VGG 19: https://web.eecs.umich.edu/~justincj/models/vgg19-d01eb7cb.pth
 VGG 16: https://web.eecs.umich.edu/~justincj/models/vgg16-00b39a1b.pth
 """
-VGG19_PATH = '../models/vgg19-d01eb7cb.pth'
+VGG19_PATH = os.path.dirname(os.path.abspath(__file__)) + '/models/vgg19-d01eb7cb.pth'
 POOL = 'max'
 
 def processImage(content_image, style_image):
-    if content_image is None:
-        print("Missing content image")
-        exit()
-
-    if style_image is None:
-        print("Missing style image")
-        exit()
-
     CONTENT_PATH = content_image
-    STYLE_PATH = style_image
+    STYLE_PATH = os.path.dirname(os.path.abspath(__file__)) + '/styles' + style_image
 
     device = ("cuda" if torch.cuda.is_available() else "cpu")
-    print(device)
+#     print(device)
 
     if not os.path.isdir(OUTPUT_DIRECTORY):
-        os.mkdir(ROOT_DIRECTORY + '/output')
+        os.mkdir(ROOT_DIRECTORY + '/output_image')
 
     # %%
     # Load Images
@@ -134,9 +128,9 @@ def processImage(content_image, style_image):
         g_clone = ttoi(g.clone().detach())
         g_preserve = transfer_color(c_clone, g_clone)  # Style Transfer + Preserve original color
         # show(g_preserve)
-        saveimg(g_preserve, 333)  # out333 = final with preseved colors
+        saveimg(g_preserve, 333)  # out333 = final with preserved colors
 
-    print ("File uploaded successfully")
+    print(OUTPUT_FILENAME + "-500.png")
 
 # %%
 # Utils
@@ -163,7 +157,9 @@ def show(img):
 def saveimg(img, iters):
     if (PIXEL_CLIP=='True'):
         img = img.clip(0, 255)
-    cv2.imwrite(os.path.join(OUTPUT_DIRECTORY, 'img-' + str(iters) + '.png'), img)
+
+    if iters == 500:
+        cv2.imwrite(os.path.join(OUTPUT_DIRECTORY, OUTPUT_FILENAME + '-' + str(iters) + '.png'), img)
 
 # Color transfer
 def transfer_color(src, dest):
@@ -358,7 +354,7 @@ def stylize(model, content_tensor, style_tensor, optimizer, g, iteration=NUM_ITE
             # Print Loss, show and save image
             i[0]+=1
             if (((i[0] % SHOW_ITER) == 1) or (i[0]==NUM_ITER)):
-                print("Style Loss: {} Content Loss: {} TV Loss: {} Total Loss : {}".format(s_loss.item(), c_loss.item(), t_loss, total_loss.item()))
+#                 print("Style Loss: {} Content Loss: {} TV Loss: {} Total Loss : {}".format(s_loss.item(), c_loss.item(), t_loss, total_loss.item()))
                 if (PRESERVE_COLOR == 'True'):
                     g_ = transfer_color(ttoi(content_tensor.clone().detach()), ttoi(g.clone().detach()))
                 else:
@@ -376,4 +372,4 @@ def stylize(model, content_tensor, style_tensor, optimizer, g, iteration=NUM_ITE
 
 content_image = sys.argv[1]
 
-processImage(content_image, './styles/style-amorsolo-1.jpg')
+processImage(content_image, '/style-spolarium-juanluna.jpg')

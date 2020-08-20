@@ -46,5 +46,5 @@ Route::get('/ArtistPage/individual', function () {
 
 Route::resource('file', 'FileController');
 Route::resource('posts', 'PostsController');
-
+Route::resource('poem', 'PoemController');
 

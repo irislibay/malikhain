@@ -12,11 +12,15 @@ npm-debug.log
 yarn-error.log
 
 models
+scripts/gpt/models
+scripts/neural_style/models
 scripts/venv
 scripts/env
 scripts/.venv
 scripts/.env
 /public/uploads
 /public/output
+/public/output_image
+/public/output_poem
 
 .idea

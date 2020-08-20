@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
@@ -19,9 +19,26 @@ class FileController extends Controller
      */
     public function index()
     {
-        // fetch all the images
-        $files  =   File::all();
-        return view('Gallery',['files' => $files]);
+        $poems_path = public_path('output_poem');
+        $poem_files = FacadeFile::files($poems_path);
+        $poems = array();
+
+        foreach($poem_files as $poem) {
+            $poem = pathinfo($poem);
+            $content = FacadeFile::get('output_poem/'.$poem['basename']);
+            array_push($poems, $content);
+        }
+
+        $images_path = public_path('output_image');
+        $image_files = FacadeFile::files($images_path);
+        $images = array();
+
+        foreach($image_files as $image) {
+            $image = pathinfo($image);
+            array_push($images, $image['basename']);
+        }
+
+        return view('Gallery',['images' => $images, 'poems' => $poems]);
     }
 
     /**
@@ -42,15 +59,12 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        // file validation
         $validator = Validator::make($request->all(), ['filename' => 'required|mimes:jpeg,png,jpg,bmp|max:2048']);
 
-        // if validation fails
         if($validator->fails()) {
             return back()->withErrors($validator->errors());
         }
 
-        // if validation success
         if($file = $request->file('filename')) {
             $name = time().time().'.'.$file->getClientOriginalExtension();
 
@@ -59,21 +73,21 @@ class FileController extends Controller
             if($file->move($target_path, $name)) {
                 $file_path = $target_path.$name;
 
-                $process = new Process(['../scripts/venv/bin/python', '../scripts/neural_style.py', $file_path]);
+                $process = new Process(['../scripts/venv/bin/python', '../scripts/neural_style/main.py', $file_path]);
                 $process->setTimeout(3600);
                 $process->setIdleTimeout(3600);
                 $process->run();
 
-                // executes after the command finishes
                 if (!$process->isSuccessful()) {
                     FacadeFile::delete($file_path);
-                    throw new ProcessFailedException($process);
+                    Log::error(new ProcessFailedException($process));
+                    return back()->withErrors(['filename' => 'Unable to upload file']);
                 }
 
-                // save file name in the database
-                $file = File::create(['filename' => $name]);
+                $output_filename = $process->getOutput();
+                Log::info($output_filename);
 
-                return back()->with("success", $process->getOutput());
+                return back()->with("success", "File uploaded successfully");
             }
         }
     }

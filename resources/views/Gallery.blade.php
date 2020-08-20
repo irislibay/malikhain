@@ -6,14 +6,20 @@
 	<div id="featured" class="extra2 margin-btm tray">
 		<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
 			<h2>Exhibit</h2>
-				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span> 
+				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span>
 		</div>
-			
-					@foreach($files as $file)
-					<figure class="wiggly wiggle2">
-						<img src="/uploads/{{ $file->filename }}">
-					</figure>
-					@endforeach
+
+        @foreach($images as $image)
+            <figure class="wiggly wiggle2">
+                <img src="/output/{{ $image }}" />
+            </figure>
+        @endforeach
+
+        @foreach($poems as $poem)
+            <figure class="wiggly wiggle2">
+                {!! $poem  !!}
+            </figure>
+        @endforeach
 	</div>
 </div>
 
