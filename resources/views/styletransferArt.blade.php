@@ -6,10 +6,10 @@
 <div id="wrapper">
 	<div id="featured-wrapper">
 		<div id="featured" class="extra2 margin-btm tray">
-			<div class="main-title">
-				<h2 data-aos="fade-up"
-				data-aos-duration="2000">Art Style transfer</h2>
-				<span class="byline">Fuse your artwork with your chosen Filipino artist's work</span> </div>
+			<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
+                <h2>Art Style Fusion</h2>
+                    <span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Fuse your artwork with a Classic Filipino artist's work</span>
+            </div>
 
 				<div class="featured">
 					<form action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
@@ -29,14 +29,23 @@
 												</div>
 											@endif
 											<div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
-												<label for="filename"></label>
+												<label for="filename">Upload your artwork (.jpeg, .jpg, .png)</label>
 													<input type="file" name="filename" id="filename" class="form-control">
 													<span class="text-danger"> {{ $errors->first('filename') }}</span>
+											</div>
+											<div>
+												<label>Select Style</label>
+												<select>
+													<option value="styles/style-pacitaabad.jpg">Pacita Abad</option>
+                   	 								<option value="styles/style-filipinofamily-baldemor.jpg">Manuel Baldemor</option>
+                   								    <option value="styles/style-spolarium-juanluna.jpg">Juan Luna</option>
+                    								<option value="styles/style-amorsolo-1.jpg">Fernando Amorsolo</option>
+												</select>
 											</div>
 									</div>
 									<div class="card-footer">
 										<div class="form-group">
-											<button type="submit" class="btn btn-success btn-md"> Upload </button>
+											<button type="submit" class="btn btn-success btn-md"> Fuse my artwork! </button>
 										</div>
 										{{ csrf_field() }}
 									</div>
