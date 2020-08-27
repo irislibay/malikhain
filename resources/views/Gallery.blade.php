@@ -6,25 +6,23 @@
 	<div id="featured" class="extra2 margin-btm tray">
 		<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
 			<h2>Exhibit</h2>
-				<span class="byline">Style-content-fused works using artificial intelligence</span> </div>
-				<div>
-					<figure class="wiggly wiggle2">
-							<img src="/images/amorsolo-iris2.png" alt="Wassily Kandinsky: Untitled 1929">
-							<figcaption> In the style of Fernando Amorsolo</figcaption>
-					</figure>
-						
-					<figure class="wiggly wiggle">
-							<img src="/images/filipinofamilybaldemor-iris.png" alt="kandinsky">
-							<figcaption> In the style of Manuel Baldemor</figcaption>
-					</figure>
-						
-					<figure class="wiggly wiggle1">
-							<img src="/images/spolariumjuanluna-iris.png" alt="kandinsky">
-							<figcaption> In the style of Juan Luna</figcaption>
-					</figure>
-				</div>
+				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span>
+		</div>
+
+        @foreach($images as $image)
+            <figure class="wiggly wiggle2">
+                <img src="/output/{{ $image }}" />
+            </figure>
+        @endforeach
+
+        @foreach($poems as $poem)
+            <figure class="wiggly wiggle2">
+                {!! $poem  !!}
+            </figure>
+        @endforeach
 	</div>
 </div>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script>

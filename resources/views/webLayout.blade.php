@@ -25,7 +25,7 @@ Released   : 20140124
     </head>
     <body>
         
-        <div id="header-wrapper">
+        <div id="header-wrapper" >
             <div id="header" class="tray">
                 <div id="logo">
                     <h1></span><a href="/home" style="color: #FEBE7E;">malikh<strong style="color: #FFEDBC;">ai</strong>n</a></h1>
@@ -40,12 +40,11 @@ Released   : 20140124
                 </div>
             </div>
     </div>
+    
         @yield('content')
 
         
-        <div id="copyright" class="tray">
-            <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-        </div>
+
 
         {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
             <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

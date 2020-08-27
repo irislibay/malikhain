@@ -5,67 +5,67 @@
 	<div id="featured" class="extra2 margin-btm tray">
 		<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
 		<h2>Artists</h2>
-		<span class="byline">Meet our featured Filipino classical artists!</span> </div>
+		<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Meet our featured Filipino classical artists!</span> </div>
 		<div id="card">
 			<div class="content">
 				<a class="card" href="#!">
-					<div class="front" style="background-image: url(https://ih0.redbubble.net/image.846505055.7003/flat,750x1000,075,f.jpg)">
-						<p>Cris P. Bacon</p>
+					<div class="front" style="background-image: url(https://3.bp.blogspot.com/-bKf33Aw6UH4/TwumHHTFU-I/AAAAAAAAEHg/-AZVlFsnFVY/s640/Ang+Kiukok+2.jpg)">
+						<p>Ang Kiukok</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>National Artist.</p>
+							<p>A Filipino painter of Chinese descent and was a National Artist for Visual Arts.</p><button class="button">Know more</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
-					<div class="front" style="background-image: url(https://ih1.redbubble.net/image.769302646.9935/flat,1000x1000,075,f.u1.jpg)">
+					<div class="front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b0/Jose_rizal_01.jpg)">
 						<p>Jose Rizal</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>National hero of the Filipino people.</p>
+							<p>An ophthalmologist by profession, a writer, and a key member of the Filipino Propaganda Movement.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
-					<div class="front" style="background-image: url(https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/89545874_1082209535470504_5182770244770332672_n.jpg?_nc_cat=105&_nc_sid=b96e70&_nc_oc=AQmwO3hOvUDbOU7YuRb1a_avq6tUXkcHWXxxEcvIJPdmE1DTRI_yCMW2i8t35R4XOBA&_nc_ht=scontent.fmnl4-2.fna&oh=d2736e5ad37880c93bde3ca82ed4c0c6&oe=5E8F3B0F)">
+					<div class="front" style="background-image: url(https://images.summitmedia-digital.com/esquiremagph/images/2017/01/20/juan.png)">
 						<p>Juan Luna</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>World-renowned artist.</p>
+							<p>Gold-medalist in 1884 Madrid Exposition of Fine Arts.</p><button class="button">Know More</button>
 						</div>
 					</div>
-				</a><a class="card" href="#!">
-					<div class="front" style="background-image: url(https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/87808561_492214664805481_7885563644832907264_n.jpg?_nc_cat=103&_nc_sid=b96e70&_nc_oc=AQmZi-r8s6agihfmFlwIt1DF-qKIlbfu_g5xWFP1zyiZ7cfOQ4wUiEgngn48BSL0Lkw&_nc_ht=scontent.fmnl4-1.fna&oh=3d1e173a085e6e94f78c4519f0cf1127&oe=5EA51AE0)">
+				</a><a class="card" href="/ArtistPage/individual">
+					<div class="front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg/330px-Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg)">
 						<p>Francisco Balagtas</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>Creator of cultural touchstone.</p>
+							<p>He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. </p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
-					<div class="front" style="background-image: url(https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/86267056_1599300020224444_7444794764974620672_n.jpg?_nc_cat=108&_nc_sid=b96e70&_nc_oc=AQmtBRRd8xd02KznlrlAvt5oCKIcbjgdWHKAm-8UeJ0bR5nWNOIIh-E5N3sSyJaHNcQ&_nc_ht=scontent.fmnl4-6.fna&oh=5623bc445fba3e964f161563c64adece&oe=5EA73011)">
+					<div class="front" style="background-image: url(https://www.artcircle-gallery.com/wp-content/uploads/2017/03/13256243_1718585861758185_1750782011660232265_n.jpg)">
 						<p>Manuel Baldemor</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>The folk artist.</p>
+							<p>He has contributed more than 24 designs for reproduction on UNICE’s greeting cards and are distributed worldwide.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a><a class="card" href="#!">
-					<div class="front" style="background-image: url(https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/89471549_489114861785145_8356408741851037696_n.jpg?_nc_cat=104&_nc_sid=b96e70&_nc_oc=AQnWyRA4LHcCvEt8gXwuEKc4mEMYyeW_KyQV3sRXOwge6aHn0NaYvuLrZBF206c45x8&_nc_ht=scontent.fmnl4-1.fna&oh=2c3abce2a86960dd4c6a77945887d241&oe=5E949CCE)">
+					<div class="front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg)">
 						<p>Pacita Abad</p>
 					</div>
 					<div class="back">
 						<div>
-							<p>Consectetur adipisicing elit. Possimus, praesentium?</p>
-							<p>Provident consectetur natus voluptatem quis tenetur sed beatae eius sint.</p><button class="button">Click Here</button>
+							<p>TOYM-awardee. <br>(Ten Outstanding Young Men)</p>
+							<p>Pacita Abad became the first woman ever to receive this prestigious award.</p><button class="button">Know More</button>
 						</div>
 					</div>
 				</a>
