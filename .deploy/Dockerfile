@@ -5,7 +5,7 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN apt-get update && add-apt-repository ppa:deadsnakes/ppa -y && apt-get install -y build-essential cron curl locales zip unzip git software-properties-common python3.7
+RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:deadsnakes/ppa -y && apt-get install -y build-essential cron curl locales zip unzip git python3.7
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
