@@ -5,7 +5,7 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN apt-get update && add-apt-repository ppa:deadsnakes/ppa -y && apt-get install -y build-essential cron curl locales zip unzip git software-properties-common python3.7
+RUN apt-get update && apt-get install -y build-essential cron curl locales zip unzip git
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
@@ -29,12 +29,13 @@ RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 
 # Copy app
-RUN mkdir $LARAVEL_PATH/public/output_image
-RUN mkdir $LARAVEL_PATH/public/output_poem
-RUN mkdir $LARAVEL_PATH/public/uploads
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
 COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
+
+RUN mkdir $LARAVEL_PATH/public/output_image
+RUN mkdir $LARAVEL_PATH/public/output_poem
+RUN mkdir $LARAVEL_PATH/public/uploads
 RUN chmod -R 775 $LARAVEL_PATH/public/output_image
 RUN chmod -R 775 $LARAVEL_PATH/public/output_poem
 RUN chmod -R 775 $LARAVEL_PATH/public/uploads
