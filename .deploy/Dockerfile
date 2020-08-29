@@ -5,8 +5,8 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential cron curl locales zip unzip git python3.7 npm
-RUN alias python='/usr/bin/python3.7'
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
+RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 nodejs
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
