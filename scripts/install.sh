@@ -1,13 +1,20 @@
 #!/bin/bash
 
-if ! python --version &> /dev/null
+PYTHON_COMMAND="python3.7"
+
+if ! python3.7 --version &> /dev/null
 then
-    echo "Python 3.7 is not installed"
-    echo "Exiting..."
-    exit
+    if ! python --version &> /dev/null
+    then
+        echo "Python 3.7 is not installed"
+        echo "Exiting..."
+        exit
+    else
+        PYTHON_COMMAND="python"
+    fi
 fi
 
-PYTHON_VERSION_COMMAND="python -c 'import sys; print(\".\".join(map(str, sys.version_info[:3])))'"
+PYTHON_VERSION_COMMAND="$PYTHON_COMMAND -c 'import sys; print(\".\".join(map(str, sys.version_info[:3])))'"
 PYTHON_VERSION=$(eval "$PYTHON_VERSION_COMMAND")
 
 if [[ ! $PYTHON_VERSION == *"3.7"* ]]
