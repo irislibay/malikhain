@@ -6,7 +6,7 @@ WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
 RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
-RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv nodejs
+RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv nodejs libgl1-mesa-glx
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
