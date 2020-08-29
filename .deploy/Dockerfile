@@ -5,7 +5,7 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential cron curl locales zip unzip git python3.7
+RUN apt-get update && apt-get install -y build-essential cron curl locales zip unzip git python3.7 npm
 RUN alias python='/usr/bin/python3.7'
 
 # Setup cron job
@@ -28,6 +28,10 @@ COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
+
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+RUN npm install
 
 # Copy app
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
