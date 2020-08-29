@@ -32,6 +32,7 @@ RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -
 COPY package.json package.json
 COPY package-lock.json package-lock.json
 RUN npm install
+RUN npm update
 
 # Copy app
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
