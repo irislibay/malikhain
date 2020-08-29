@@ -13,6 +13,10 @@ echo "🎬 python installation"
 
 cd scripts && ./install.sh && cd /srv/app
 
+echo "🎬 webpack compilation"
+
+npm run production
+
 echo "🎬 start supervisord"
 
 supervisord -c $LARAVEL_PATH/.deploy/config/supervisor.conf

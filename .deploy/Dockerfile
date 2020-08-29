@@ -5,7 +5,7 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv nodejs
 
 # Setup cron job
@@ -37,7 +37,6 @@ RUN npm install
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
 COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
-RUN npm run production
 
 RUN mkdir $LARAVEL_PATH/public/output_image
 RUN mkdir $LARAVEL_PATH/public/output_poem
