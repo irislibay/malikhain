@@ -24,22 +24,20 @@ then
     exit
 fi
 
-VENV_EXISTS=true
-
 if [ ! -d "venv" ]
 then
     echo "Python virtual environment does not exist"
-    VENV_EXISTS=false
+    VENV_NOT_EXISTS=false
 elif ! ./venv/bin/python --version &> /dev/null
 then
     echo "Python virtual environment exists but python command was not found"
     rm -rf venv
-    VENV_EXISTS=false
+    VENV_NOT_EXISTS=false
 else
     echo "Python virtual environment found"
 fi
 
-if [ ! $VENV_EXISTS ]
+if [ $VENV_NOT_EXISTS ]
 then
     echo "Creating python virtual environment..."
     $PYTHON_COMMAND -m venv venv
