@@ -44,8 +44,6 @@ RUN chmod -R 775 $LARAVEL_PATH/public/uploads
 RUN chmod -R 775 $LARAVEL_PATH/scripts/gpt/models
 RUN chmod -R 775 $LARAVEL_PATH/scripts/neural_style/models
 
-RUN scripts/install.sh
-
 # Set any ENVs
 ARG APP_KEY=${APP_KEY}
 ARG APP_NAME=${APP_NAME}
