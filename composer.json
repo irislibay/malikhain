@@ -14,7 +14,7 @@
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.1",
-        "panique/laravel-sass": "1.0"
+        "panique/laravel-sass": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
