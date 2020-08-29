@@ -4,8 +4,7 @@ FROM php:7.2-fpm
 ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:deadsnakes/ppa -y && apt-get install -y build-essential cron curl locales zip unzip git python3.7
+RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
@@ -29,15 +28,26 @@ RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 
 # Copy app
-RUN mkdir $LARAVEL_PATH/public/output_image
-RUN mkdir $LARAVEL_PATH/public/output_poem
-RUN mkdir $LARAVEL_PATH/public/uploads
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
 COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
-RUN chmod -R 775 $LARAVEL_PATH/public/output_image
-RUN chmod -R 775 $LARAVEL_PATH/public/output_poem
-RUN chmod -R 775 $LARAVEL_PATH/public/uploads
+
+RUN mkdir $LARAVEL_PATH/public/output_image
+RUN mkdir $LARAVEL_PATH/public/output_poem
+RUN mkdir $LARAVEL_PATH/public/uploads
+RUN mkdir $LARAVEL_PATH/scripts/gpt/models
+RUN mkdir $LARAVEL_PATH/scripts/neural_style/models
+RUN chmod -R 755 $LARAVEL_PATH/public/output_image
+RUN chmod -R 755 $LARAVEL_PATH/public/output_poem
+RUN chmod -R 755 $LARAVEL_PATH/public/uploads
+RUN chmod -R 755 $LARAVEL_PATH/scripts/gpt/models
+RUN chmod -R 755 $LARAVEL_PATH/scripts/neural_style/models
+RUN chown -R www-data:www-data $LARAVEL_PATH/public/output_image
+RUN chown -R www-data:www-data $LARAVEL_PATH/public/output_poem
+RUN chown -R www-data:www-data $LARAVEL_PATH/public/uploads
+RUN chown -R www-data:www-data $LARAVEL_PATH/scripts/gpt/models
+RUN chown -R www-data:www-data $LARAVEL_PATH/scripts/neural_style/models
+
 
 # Set any ENVs
 ARG APP_KEY=${APP_KEY}

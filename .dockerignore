@@ -1,0 +1,10 @@
+vendor
+node_modules
+.env
+
+public/output_poem
+public/output_image
+
+scripts/venv
+scripts/gpt/models
+scripts/neural_style/models
