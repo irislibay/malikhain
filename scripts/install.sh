@@ -45,7 +45,7 @@ then
 fi
 
 echo "Installing python requirements..."
-./venv/bin/pip install -r requirements.txt
+./venv/bin/pip  --no-cache-dir install -r requirements.txt
 echo "Installed python requirements"
 
 if [ ! -f neural_style/models/vgg19-d01eb7cb.pth ]; then
