@@ -44,6 +44,9 @@ then
     echo "Created python virtual environment"
 fi
 
+echo "Upgrading pip before installing requirements..."
+./venv/bin/pip install --upgrade pip
+
 echo "Installing python requirements..."
 ./venv/bin/pip  --no-cache-dir install -r requirements.txt
 echo "Installed python requirements"
