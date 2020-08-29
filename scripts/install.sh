@@ -42,7 +42,7 @@ fi
 if [ ! $VENV_EXISTS ]
 then
     echo "Creating python virtual environment..."
-    python -m venv venv
+    $PYTHON_COMMAND -m venv venv
     echo "Created python virtual environment"
 fi
 
