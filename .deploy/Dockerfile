@@ -36,9 +36,15 @@ RUN chmod -R 775 $LARAVEL_PATH/storage
 RUN mkdir $LARAVEL_PATH/public/output_image
 RUN mkdir $LARAVEL_PATH/public/output_poem
 RUN mkdir $LARAVEL_PATH/public/uploads
+RUN mkdir $LARAVEL_PATH/scripts/gpt/models
+RUN mkdir $LARAVEL_PATH/scripts/neural_style/models
 RUN chmod -R 775 $LARAVEL_PATH/public/output_image
 RUN chmod -R 775 $LARAVEL_PATH/public/output_poem
 RUN chmod -R 775 $LARAVEL_PATH/public/uploads
+RUN chmod -R 775 $LARAVEL_PATH/scripts/gpt/models
+RUN chmod -R 775 $LARAVEL_PATH/scripts/neural_style/models
+
+RUN scripts/install.sh
 
 # Set any ENVs
 ARG APP_KEY=${APP_KEY}
