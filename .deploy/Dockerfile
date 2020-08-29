@@ -5,7 +5,8 @@ ENV LARAVEL_PATH=/srv/app
 WORKDIR $LARAVEL_PATH
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get update && apt-get install -y build-essential cron locales zip unzip git python3.7 python3-venv nodejs
 
 # Setup cron job
 RUN (crontab -l ; echo "* * * * * /usr/local/bin/php /srv/app/artisan schedule:run >> /dev/null 2>&1") | crontab
@@ -28,10 +29,15 @@ COPY composer.lock composer.lock
 RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+RUN npm install
+
 # Copy app
 COPY --chown=www-data:www-data . $LARAVEL_PATH/
 COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
+RUN npm run production
 
 RUN mkdir $LARAVEL_PATH/public/output_image
 RUN mkdir $LARAVEL_PATH/public/output_poem
@@ -48,7 +54,6 @@ RUN chown -R www-data:www-data $LARAVEL_PATH/public/output_poem
 RUN chown -R www-data:www-data $LARAVEL_PATH/public/uploads
 RUN chown -R www-data:www-data $LARAVEL_PATH/scripts/gpt/models
 RUN chown -R www-data:www-data $LARAVEL_PATH/scripts/neural_style/models
-
 
 # Set any ENVs
 ARG APP_KEY=${APP_KEY}
