@@ -75,7 +75,7 @@
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="card col-12 mb-5 bg-transparent border border-white">
                                     <div class="card-body text-white">
-                                        <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="30"></textarea>
+                                        <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35"></textarea>
                                         <div class="row">
                                             <div class="offset-4">
                                                 <button class="btn btn-success btn-sm">Profile</button>
