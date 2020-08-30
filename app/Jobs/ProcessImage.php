@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\File;
+use DateTime;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\File as FacadeFile;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
+use Throwable;
 
 class ProcessImage implements ShouldQueue
 {
@@ -23,6 +25,14 @@ class ProcessImage implements ShouldQueue
      * @var int
      */
     public $timeout = 3600;
+
+    /**
+     * The number of times the job may be attempted.
+     *
+     * @var int
+     */
+    public $tries = 2;
+
     protected $original_filename;
     protected $file_path;
     private $file_id;
@@ -61,6 +71,18 @@ class ProcessImage implements ShouldQueue
             Log::error(new ProcessFailedException($process));
         }
 
+        File::destroy($this->file_id);
+    }
+
+    /**
+     * Handle a job failure.
+     *
+     * @param  Throwable  $exception
+     * @return void
+     */
+    public function failed(Throwable $exception)
+    {
+        FacadeFile::delete($this->file_path);
         File::destroy($this->file_id);
     }
 }
