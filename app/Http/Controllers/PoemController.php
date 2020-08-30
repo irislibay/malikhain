@@ -68,7 +68,7 @@ class PoemController extends Controller
         $current_timestamp = Carbon::now()->timestamp;
         FacadeFile::put('output_poem/'.$current_timestamp.'.txt',$output);
 
-        return back()->with("success", "Poem uploaded successfully", $output);
+        return back()->with("success", "Poem uploaded successfully")->with("output", $output);
     }
 
     /**
