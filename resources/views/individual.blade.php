@@ -5,81 +5,16 @@
 
 <div id="artist" style="object-fit:cover; height:1100px">
     <div class="container" >
-        <div class="word_split wrapper">
-            <span class="word word1" style="text-align:left;">Francisco </span>
-            <span class="word word2">Balagtas</span>
-            <span class="word word3">Personal</span>
-            <span class="word word4">Details</span>
-            <span class="word word5">Employment</span>
-            <span class="word word6">History </span>
-            <span class="word word7">Education</span>
-            <span class="word word8">Personal</span>
-            <span class="word word9">Skills </span>
-            <span class="word word10">Technical</span>
-            <span class="word word11">Skills </span>
-            <span class="word word12">Get In </span>
-            <span class="word word13">Touch</span>
+        <div class="box1">
+            <img src="../images/kanna.png"/>
+        </div>
+        <div class="box2">
+            <img src="https://www.vangoghgallery.com/catalog/image/0612/Starry-Night.jpg"/>
+        </div>
+        <div class="box3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in elit convallis orci condimentum rhoncus. Aliquam dignissim auctor facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse dapibus, ex nec ornare dignissim, enim neque eleifend mi, ut fringilla metus odio vel ante. Pellentesque commodo sodales facilisis. Cras mi diam, gravida et vestibulum ac, gravida eget arcu. In vitae ullamcorper augue, vel ornare ante. Phasellus facilisis ante quis lectus faucibus vestibulum. Integer in efficitur tortor, quis accumsan tortor. Sed efficitur velit nec suscipit porta. Aenean blandit justo ac nibh molestie, id facilisis mauris molestie. Aenean viverra sem neque, sit amet eleifend turpis lacinia eu. Nunc rhoncus tortor non lorem lobortis facilisis. Donec a libero vel mauris interdum interdum. Maecenas viverra suscipit erat. Vivamus turpis nibh, iaculis tincidunt dignissim sagittis, vulputate nec ante.</p>
+        </div>
 
-            <div class="bubble2">
-            <span class="the-arrow2"></span>
-            <img src="https://3.bp.blogspot.com/-i60NKbeMeOw/T0YUqU1_AQI/AAAAAAAABj4/3i7a6Zgo_lo/s1600/Francisco+Baltazar+y+dela+Cruz.jpg"/>
-            </div>
-            <div class="bubble3">
-            <span class="the-arrow3"></span>
-            NATIONALITY...<br/>
-            LOCATION...<br/>
-            BIRTHDAY...<br/>
-            HOBBIES<br/>
-            ETC...<br/>
-            ETC...<br/>
-            </div>
-            <div class="bubble4">
-            <span class="the-arrow4"></span>
-            GRAPHIC DESIGNER 2005 - 2007<br/>
-            Lorem Ipsum dolor sit amet. Lorem Ipsum dolor.<br/><br/>
-            CREATIVE DIRECTOR 2008 - Current
-            <br/>
-            Lorem Ipsum dolor sit amet.
-            
-            </div>
-            <div class="bubble5">
-            <span class="the-arrow5"></span>
-            HIGH SCHOOL<br/>
-            Lorem Ipsum dolor sit amet<br/>
-            May 2004, GPA 1.5<br/><br/>
-            UNIVERSITY <br/>
-            Lorem Ipsum dolor sit amet<br/>
-            July 2007, GPA 1.5
-            
-            </div>
-            <div class="bubble6">
-            <span class="the-arrow6"></span>
-            SOCIAL COMMITMENT<br/>
-            ORGANIZATION<br/>
-            CREATIVITY<br/>
-            COMMUNICATION<br/>
-            TEAMWORK<br/>
-            </div>
-            <div class="bubble7">
-            <span class="the-arrow7"></span>
-            PHOTOSHOP<br/>
-            ILLUSTRATOR<br/>
-            INDESIGN<br/>
-            FLASH<br/>
-            DREAMWEAVER<br/>
-            XHTML/CSS<br/>
-            JAVASCRIPT<br/>
-            </div>
-            <div class="bubble8">
-            <span class="the-arrow8"></span>
-            PHONE...<br/>
-            EMAIL...<br/>
-            WEBSITE... <br/>
-            TWITTER...<br/>
-            FACEBOOK...<br/>
-            DRIBBBLE...<br/>
-            </div>   
-        </div>  
     </div><!--end container-->
 </div>
 
