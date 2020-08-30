@@ -76,7 +76,13 @@
                                 <form>
                                     <div class="card col-12 mb-5 bg-transparent border border-white">
                                         <div class="card-body text-white">
-                                            <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35"></textarea>
+                                            <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35">
+                                            @if(Session::has('success'))
+                                            {{ $output }}
+                                            @else
+                                            output goes here
+                                            @endif
+                                            </textarea>
                                             <div class="row">
                                                 <div class="offset-4">
                                                     <button class="btn btn-success btn-sm">Profile</button>
