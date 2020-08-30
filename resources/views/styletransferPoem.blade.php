@@ -78,7 +78,9 @@
                                         <div class="card-body text-white">
                                             <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35">
                                             @if(Session::has('success'))
-                                            {{$outout}}
+                                            {{ $output }}
+                                            @elseif
+                                            output goes here
                                             @endif
                                             </textarea>
                                             <div class="row">
