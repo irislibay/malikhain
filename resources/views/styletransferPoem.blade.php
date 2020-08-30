@@ -1,4 +1,4 @@
-<div id="particles-js"></div>
+<div id="particles-js" style="width: 100%; margin: 0; padding: 0;"></div>
 @extends('webLayout')
 
 @section('content')
@@ -13,32 +13,79 @@
                 <div class="featured">
                     <form action="{{ route('poem.store') }}" method="post" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
-                                <div class="card shadow">
-                                    <div class="card-header bg-info text-white" color="#F3EEC3">
-                                    </div>
-                                    <div class="card-body">
-                                        @if(Session::has('success'))
-                                            <div class="alert alert-success">
-                                                {!! Session::get('success') !!}
-                                                @php
-                                                    Session::forget('success');
-                                                @endphp
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card col-12 mb-5 bg-transparent border border-white">
+                                    <div class="card-body text-white">
+                                        <div class="row">
+                                            <img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" class="col-3 rounded float-left border border-white" alt="...">
+                                            <div class="col-9">
+                                                <br>
+                                                <select class="form-control form-control-sm">
+                                                    <option>Large select 1</option>
+                                                    <option>Large select 2</option>
+                                                    <option>Large select 3</option>
+                                                    <option>Large select 4</option>
+                                                    <option>Large select 5</option>
+                                            </select>
                                             </div>
-                                        @endif
-                                        <label>Paste your poem here</label>
-                                        <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
-                                            <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15"></textarea>
-                                            <span class="text-danger"> {{ $errors->first('poem') }}</span>
                                         </div>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-success btn-md"> Fuse my poem! </button>
-                                        </div>
-                                        {{ csrf_field() }}
                                     </div>
                                 </div>
+                                <div class="card shadow bg-transparent border border-white">
+                                    <form>
+                                        <div class="form-group">
+                                            <div class="card-header bg-info text-white" color="#F3EEC3">
+                                                <p class="text-left">Choose a text file:</p>
+                                                <input type="file" class="form-control-file border border-white" id="poemTextFile" accept=".txt">
+                                            </div>
+                                            <div class="col-12 m-auto">
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-5"><hr class="bg-white"></div>
+                                                    <div class="col-2 text-white">OR</div>
+                                                    <div class="col-5"><hr class="bg-white"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                            <p class="text-left text-white">Type in your poem here:</p>
+                                                @if(Session::has('success'))
+                                                    <div class="alert alert-success">
+                                                        {!! Session::get('success') !!}
+                                                        @php
+                                                            Session::forget('success');
+                                                        @endphp
+                                                    </div>
+                                                @endif
+                                                <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
+                                                    <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15"></textarea>
+                                                    <span class="text-danger"> {{ $errors->first('poem') }}</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-success btn-sm"> Fuse File </button>
+                                                    <button type="submit" class="btn btn-success btn-sm"> Fuse Text </button>
+                                                </div>
+                                                {{ csrf_field() }}
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <form>
+                                    <div class="card col-12 mb-5 bg-transparent border border-white">
+                                        <div class="card-body text-white">
+                                            <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35"></textarea>
+                                            <div class="row">
+                                                <div class="offset-4">
+                                                    <button class="btn btn-success btn-sm">Profile</button>
+                                                    <button class="btn btn-success btn-sm">Download</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </form>
