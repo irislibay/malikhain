@@ -1,72 +1,49 @@
-@extends('galleryLayout')
+@extends('webLayout')
 
 @section('content')
 
-<div id="featured-wrapper">
-	<div id="featured" class="extra2 margin-btm tray">
-		<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
-			<h2>Exhibit</h2>
-				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span>
+	<div class="my-5">
+		<div class="text-white text-center mb-5" data-aos="fade-up" data-aos-duration="2000">
+			<p class="display-4  drop-shadow font-weight-bold" style="font-family: 'Megrim', cursive;">Exhibit</p>
+			<span class="h3" style="font-family: 'Major Mono Display', cursive">Style-content-fused works using artificial intelligence</span>
 		</div>
 
-        @foreach($images as $image)
-            <figure class="wiggly wiggle2">
-                <img src="/output_image/{{ $image }}" />
-            </figure>
-        @endforeach
+		<div id="card" class="border-bottom pb-5">
+			<div class="content">
+				@foreach($images as $image)
+					<a class="card" href="#!">
+						<div class="front" style="background-image: url(/output_image/{{ $image }})">
+						</div>
+						<div class="back">
+							<div>
+								<p>//image here//</p>
+								<p>Who is //artist name here// </p>
+								<button class="button">Know more</button>
+							</div>
+						</div>
+					</a>
+				@endforeach
 
-        @foreach($poems as $poem)
-            <figure class="wiggly wiggle2">
-                {!! $poem  !!}
-            </figure>
-        @endforeach
+				@foreach($poems as $poem)
+					<a class="card" href="#!">
+						<div class="front overflow-auto">
+							<pre class="text-dark mt-5">
+								{!! $poem  !!}
+							</pre>
+						</div>
+						<div class="back">
+							<div>
+								<p>//book image here//</p>
+								<p>Who is //artist name here// </p>
+								<button class="button">Know more</button>
+							</div>
+						</div>
+					</a>
+					
+				@endforeach
+			</div>
+		</div>
 	</div>
-</div>
-
-
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script>
-		function type($target) {
-		//stop typing when hover is off//
-		if ($target.Stop) {
-			return;
-		}
-		if ($target.index < $target.caption.length) {
-			$target.text($target.text() + $target.caption.charAt($target.index));
-
-			$target.index++;
-
-			setTimeout(function() {
-			type($target);
-			}, 50);
-		}
-		}
-		$(document).ready(function() {
-		var $figures = $(".wiggly");
-		$figures.each(function() {
-			let $figure = $(this);
-
-			let $caption = $figure.find("figcaption");
-
-			$caption.caption = $caption.text();
-			$caption.index = 0;
-			$caption.text("");
-			$caption.Stop = false;
-			let $img = $figure.find("img");
-			$figure.hover(
-			function(e) {
-				$caption.Stop = false;
-				type($caption);
-			},
-			function() {
-				$caption.Stop = true;
-				$caption.text("");
-				$caption.index = 0;
-			}
-			);
-		});
-		});
-  </script>
 
 @endsection
 

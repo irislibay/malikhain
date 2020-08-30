@@ -1,74 +1,54 @@
+<div id="particles-js"></div>
 @extends('webLayout')
 
 @section('content')
-<div id="particles-js"></div>
-<div id="wrapper">
-	<div id="featured-wrapper">
-		<div id="featured" class="extra2 margin-btm tray">
-			<div class="main-title" data-aos="fade-up" data-aos-duration="2000">
-                <h2>Art Style Fusion</h2>
-				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Fuse your artwork with a Classic Filipino artist's work</span>
-            </div>
-
-				<div class="featured">
-					<form action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
-						<div class="row">
-							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
-								<div class="card shadow">
-									<div class="card-body">
-									<!-- print success message after file upload  -->
-                                        @if(Session::has('success'))
-                                            <div class="alert alert-success">
-                                                {{ Session::get('success') }}
-                                                @php
-                                                    Session::forget('success');
-                                                @endphp
-                                            </div>
-                                        @endif
-                                        <div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
-                                            <label for="filename">Upload your artwork (.jpeg, .jpg, .png)</label>
-                                            <input type="file" name="filename" id="filename" class="form-control" accept="image/*">
-                                            <span class="text-danger"> {{ $errors->first('filename') }}</span>
-                                        </div>
-                                        <div>
-                                            <label for="style_image">Select Style</label>
-                                            <select id="style_image" name="style_image" required>
-                                                <option value="/style-pacitaabad.jpg">Pacita Abad</option>
-                                                <option value="/style-filipinofamily-baldemor.jpg">Manuel Baldemor</option>
-                                                <option value="/style-spolarium-juanluna.jpg">Juan Luna</option>
-                                                <option value="/style-amorsolo-1.jpg">Fernando Amorsolo</option>
-                                            </select>
-                                        </div>
-									</div>
-									<div class="card-footer bg-transparent">
-										<div class="form-group">
-                                            {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-success btn-md"> Fuse my artwork! </button>
-										</div>
-
-                                        <br />
-
-                                        <div id="processing-files">
-                                            @foreach($files as $file)
-                                                <div class="form-group">
-                                                    <label for="filename">{{ $file->filename }}</label>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </form>
-				</div>
-		</div>
+<div class="text-white mb-5">
+	<div class="text-center my-5" data-aos="fade-up" data-aos-duration="2000">
+		<p class="display-3 drop-shadow font-weight-bold" style="font-family: 'Megrim', cursive;">Art Style Fusion</p>
+		<p class="h2" style="color: white; font-family: 'Major Mono Display', cursive">Fuse your artwork with a Classic Filipino artist's work</p>
 	</div>
+		<form class="pt-5" action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
+			<div class="row text-dark text-center">
+				<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
+					<div class="card shadow">
+						<div class="card-body">
+						<!-- print success message after file upload  -->
+								@if(Session::has('success'))
+									<div class="alert alert-success">
+										{{ Session::get('success') }}
+										@php
+											Session::forget('success');
+										@endphp
+									</div>
+								@endif
+								<div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
+									<label class="my-3" for="filename">Upload your artwork (.jpeg, .jpg, .png)</label>
+									<input type="file" name="filename" id="filename" class="form-control my-3">
+									<span class="text-danger"> {{ $errors->first('filename') }}</span>
+								</div>
+								<div class="mt-5">
+									<label>Select Style</label>
+									<select>
+										<option value="styles/style-pacitaabad.jpg">Pacita Abad</option>
+										<option value="styles/style-filipinofamily-baldemor.jpg">Manuel Baldemor</option>
+										<option value="styles/style-spolarium-juanluna.jpg">Juan Luna</option>
+										<option value="styles/style-amorsolo-1.jpg">Fernando Amorsolo</option>
+									</select>
+								</div>
+						</div>
+						<div class="card-footer bg-transparent">
+							<div class="form-group mt-3">
+								<button type="submit" class="btn btn-success btn-md"> Fuse my artwork! </button>
+							</div>
+							{{ csrf_field() }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div> 
 </div>
 
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
     const minuteInSeconds = 60;
     setInterval(function () {
@@ -121,23 +101,5 @@
 			$imagecontainer[0].dataset.selected = selection;
 		}, 1500);
 	}
-
-// ----- Plain Javascipt ---- //
-// const selectbox = document.getElementById("selectbox");
-// const imagecontainer = document.querySelector(".images");
-// let selection = selectbox.dataset.selected;
-
-// selectbox.addEventListener("change", e => {
-//   selection = selectbox.value;
-//   imagecontainer.classList.add("loading");
-//   imagecontainer.dataset.selected = "";
-
-//   setTimeout(() => {
-//     imagecontainer.classList.remove("loading");
-//     imagecontainer.dataset.selected = selection;
-//   }, 1500);
-// });
-
 </script>
-
 @endsection

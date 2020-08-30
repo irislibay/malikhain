@@ -58,14 +58,8 @@
 #card .front {
     background-size: cover;
     padding: 2rem;
-    font-size: 1.618rem;
-    font-weight: 600;
     color: #fff;
     overflow: hidden;
-    font-family: 'Major Mono Display', monospace;
-    text-shadow: -1px -1px 0px #D1CFCE,
-    3px 3px 0px #6c6c6c,
-    6px 6px 0px #454445;
   }
 #card .front:before {
     position: absolute;
@@ -81,7 +75,7 @@
   }
 #card .card:hover .front {
     transform: rotateY(180deg);
-  }
+}
 #card .card:nth-child(even):hover .front {
     transform: rotateY(-180deg);
   }
