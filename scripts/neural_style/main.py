@@ -48,7 +48,7 @@ PIXEL_CLIP = 'True' # or False - Clipping produces better images
 CONTENT_PATH = ''
 STYLE_PATH = ''
 ROOT_DIRECTORY = os.getenv('ROOT_DIR', '.')
-OUTPUT_DIRECTORY = ROOT_DIRECTORY + '/output_image'
+OUTPUT_DIRECTORY = ROOT_DIRECTORY + '/public/output_image'
 OUTPUT_FILENAME = str(int(time.time()))
 
 """
@@ -371,5 +371,6 @@ def stylize(model, content_tensor, style_tensor, optimizer, g, iteration=NUM_ITE
     return g
 
 content_image = sys.argv[1]
+style_image = sys.argv[2]
 
-processImage(content_image, '/style-spolarium-juanluna.jpg')
+processImage(content_image, style_image)
