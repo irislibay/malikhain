@@ -79,7 +79,7 @@
                                             <textarea readonly class="form-control" id="poemOutput" name="poemOutput" style="resize:none" rows="35">
                                             @if(Session::has('success'))
                                             {{ $output }}
-                                            @elseif
+                                            @else
                                             output goes here
                                             @endif
                                             </textarea>
