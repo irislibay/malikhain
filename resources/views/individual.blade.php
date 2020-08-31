@@ -1,5 +1,5 @@
 
-@extends('indivLayout')
+@extends('webLayout')
 
 @section('content')
 

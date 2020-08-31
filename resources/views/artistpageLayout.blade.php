@@ -1,26 +1,36 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="/css/artistpage.css" rel="stylesheet"/>
         <link href="/css/default.css" rel="stylesheet"/>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     </head>
     <body>
 
-        <div id="header-wrapper">
-            <div id="header" class="tray">
-                <div id="logo">
-                    <h1></span><a href="/home" style="color: #FEBE7E;">malikh<strong style="color: #FFEDBC;">ai</strong>n</a></h1>
-                </div>
-                <div id="menu">
-                    <ul>
-                        <li class="{{Request::path() === '/' ? 'current_page_item' : ''}}"><a href="/home" accesskey="1" title="">Home</a></li>
-                        <li class="{{Request::path() === 'workshop' ? 'current_page_item' : ''}}"><a href="/workshop" accesskey="2" title="">Workshop</a></li>
-                        <li class="{{Request::path() === 'Gallery' ? 'current_page_item' : ''}}"><a href="/Gallery" accesskey="3" title="">Exhibit</a></li>
-                        <li class="{{Request::path() === 'ArtistPage' ? 'current_page_item' : ''}}"><a href="/ArtistPage" accesskey="4" title="">Featured Artists</a></li>
+        <nav class="navbar navbar-expand-sm bg-transparent text-uppercase">
+            <div class="container">
+                <h1>
+                    <a href="/home" class="border-right border-light pr-3" style="font-family: 'Megrim', cursive; color: #FEBE7E;">malikh<strong style="color: #FFEDBC;">ai</strong>n</a>
+                </h1>
+
+                <div id="menu" class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-3">
+                            <a class="nav-link {{Request::path() === 'home' || Request::path() === '/' ? 'text-white' : 'text-malikhain-yellow'}}" href="/home" accesskey="1" title=""> Home </a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link {{Request::path() === 'workshop' ? 'text-white' : 'text-malikhain-yellow'}}" href="/workshop" accesskey="2" title=""> Workshop </a>
+                        </li>
+                        <li class="nav-item  mx-3">
+                            <a class="nav-link {{Request::path() === 'Gallery' ? 'text-white' : 'text-malikhain-yellow'}}" href="/Gallery" accesskey="3" title=""> Exhibit </a>
+                        </li>
+                        <li class="nav-item mx-3">
+                            <a class="nav-link {{Request::path() === 'ArtistPage' ? 'text-white' : 'text-malikhain-yellow'}}" href="/ArtistPage" accesskey="4" title=""> Featured Artists </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-    </div>
+        </nav>
     
         @yield('content')
 
