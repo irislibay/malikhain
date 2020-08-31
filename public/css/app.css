@@ -11284,13 +11284,14 @@ a.text-malikhain-yellow:focus {
 html,
 body {
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
   background: linear-gradient(-50deg, #2C73D2, #845EC2, #0089BA, #008F7A);
-  background-size: 400% 400%;
+  background-size: 100% 100%;
   -webkit-animation: gradient 10s ease infinite;
           animation: gradient 10s ease infinite;
   font-family: "Baumans", cursive;

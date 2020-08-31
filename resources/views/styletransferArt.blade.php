@@ -5,7 +5,7 @@
 <div class="text-white mb-5">
 	<div class="text-center my-5" data-aos="fade-up" data-aos-duration="2000">
 		<p class="display-3 drop-shadow font-weight-bold" style="font-family: 'Megrim', cursive;">Art Style Fusion</p>
-		<p class="h2" style="color: white; font-family: 'Major Mono Display', cursive">Fuse your artwork with a Classic Filipino artist's work</p>
+		<p class="h2" style="font-family: 'Major Mono Display', cursive">Fuse your artwork with a Classic Filipino artist's work</p>
 	</div>
 		<form class="pt-5" action="{{ route('file.store') }}" method="post" enctype="multipart/form-data">
 			<div class="row text-dark text-center">
@@ -49,6 +49,8 @@
 	</div> 
 </div>
 
+
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
 <script>
     const minuteInSeconds = 60;
     setInterval(function () {
