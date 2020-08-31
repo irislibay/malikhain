@@ -24,7 +24,7 @@ class ProcessImage implements ShouldQueue
      *
      * @var int
      */
-    public $timeout = 3600;
+    public $timeout = 7200;
 
     /**
      * The number of times the job may be attempted.
@@ -62,8 +62,8 @@ class ProcessImage implements ShouldQueue
     public function handle()
     {
         $process = new Process(['scripts/venv/bin/python', 'scripts/neural_style/main.py', $this->file_path, $this->style_image]);
-        $process->setTimeout(3600);
-        $process->setIdleTimeout(3600);
+        $process->setTimeout(7200);
+        $process->setIdleTimeout(7200);
         $process->run();
 
         if (!$process->isSuccessful()) {
