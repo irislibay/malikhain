@@ -30,7 +30,7 @@ RUN composer global require hirak/prestissimo --no-plugins --no-scripts
 RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
 
 COPY package.json package.json
-COPY package-lock.json package-lock.json
+COPY npm-shrinkwrap.json npm-shrinkwrap.json
 RUN npm install
 RUN npm update
 
