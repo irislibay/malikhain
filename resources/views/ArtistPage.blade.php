@@ -1,4 +1,4 @@
-@extends('webLayout')
+@extends('layouts.web.index')
 
 @section('content')
 <div class="text-white mb-5" data-aos="fade-up" data-aos-duration="2000">
@@ -77,7 +77,7 @@
 		</div>
 	</div>
 </div>
-		
 
-        
+
+
 @endsection

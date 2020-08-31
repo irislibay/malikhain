@@ -6,26 +6,26 @@ img
   width: 200px
   display: block
   box-shadow: 0px 0px 30px 0px rgba(black, 0.3)
-  
+
   @media (min-width: 700px)
     width: 400px
-    
+
   @media (min-width: 1000px)
     width: 600px
-  
+
 .section-grid
   display: grid
   // Responsive, 1/3 - 2/3 split
   grid-template-columns: 1fr 2fr
   height: 100vh
-  
+
 .left,
 .right
   // Center the elements in each column
   display: flex
   justify-content: center
   align-items: center
-  
+
 .grid-text
   padding: 1rem
   position: relative
@@ -39,18 +39,18 @@ img
   // keeps the image fixed on scroll
   position: fixed
   z-index: 100
-  
+
 .image-1,
 .image-2,
 .image-3
   opacity: 0
-  
+
   &.active
     animation: fadeIn 1000ms ease forwards
     opacity: 1
-    
-    
-@keyframes fadeIn 
+
+
+@keyframes fadeIn
   0%
     opacity: 0
   100%

@@ -1,5 +1,5 @@
 <div id="particles-js"></div>
-@extends('webLayout')
+@extends('layouts.web.index')
 
 @section('content')
 <div class="text-white mb-5">
@@ -46,11 +46,11 @@
 				</div>
 			</div>
 		</form>
-	</div> 
+	</div>
 </div>
 
 
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
     const minuteInSeconds = 60;
     setInterval(function () {

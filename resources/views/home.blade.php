@@ -1,7 +1,7 @@
-@extends('webLayout')
+@extends('layouts.web.index')
 
 @section('content')
-    
+
     <div class="row border-bottom mt-5 pb-5">
         <div class="col p-4">
             <div class="text-white text-right" data-aos="zoom-in-up" >
