@@ -95,4 +95,4 @@ EXPOSE 80
 COPY ./.deploy/entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
+ENTRYPOINT ["bash", "/entrypoint.sh"]

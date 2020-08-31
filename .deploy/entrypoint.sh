@@ -11,7 +11,7 @@ php artisan migrate --no-interaction --force
 
 echo "🎬 python installation"
 
-cd scripts && ./install.sh && cd /srv/app
+cd scripts && bash ./install.sh && cd /srv/app
 
 echo "🎬 webpack compilation"
 
