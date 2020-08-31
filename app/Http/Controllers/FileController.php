@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\File;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
-use Symfony\Component\Process\Exception\ProcessFailedException;
-use Symfony\Component\Process\Process;
 use Illuminate\Support\Facades\File as FacadeFile;
+use App\Jobs\ProcessImage;
 
 
 class FileController extends Controller
@@ -38,7 +37,7 @@ class FileController extends Controller
             array_push($images, $image['basename']);
         }
 
-        return view('Gallery',['images' => $images, 'poems' => $poems]);
+        return view('Gallery', ['images' => $images, 'poems' => $poems]);
     }
 
     /**
@@ -48,7 +47,9 @@ class FileController extends Controller
      */
     public function create()
     {
-        return view('create');
+        $files = File::all();
+
+        return view('styletransferArt', ['files' => $files]);
     }
 
     /**
@@ -59,7 +60,7 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), ['filename' => 'required|mimes:jpeg,png,jpg,bmp|max:2048']);
+        $validator = Validator::make($request->all(), ['filename' => 'required|mimes:jpeg,png,jpg,bmp|max:2048', 'style_image' => 'required']);
 
         if($validator->fails()) {
             return back()->withErrors($validator->errors());
@@ -71,25 +72,15 @@ class FileController extends Controller
             $target_path = public_path('/uploads/');
 
             if($file->move($target_path, $name)) {
-                $file_path = $target_path.$name;
+                $style_image = $request->get('style_image');
 
-                $process = new Process(['../scripts/venv/bin/python', '../scripts/neural_style/main.py', $file_path]);
-                $process->setTimeout(3600);
-                $process->setIdleTimeout(3600);
-                $process->run();
-
-                if (!$process->isSuccessful()) {
-                    FacadeFile::delete($file_path);
-                    Log::error(new ProcessFailedException($process));
-                    return back()->withErrors(['filename' => 'Unable to upload file']);
-                }
-
-                $output_filename = $process->getOutput();
-                Log::info($output_filename);
+                ProcessImage::dispatch($name, $file->getClientOriginalName(), $style_image);
 
                 return back()->with("success", "File uploaded successfully");
             }
         }
+
+        return back()->with("success", "File uploaded successfully");
     }
 
     /**

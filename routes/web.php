@@ -23,9 +23,7 @@ Route::get('/workshop', function(){
     return view('workshop');
 });
 
-Route::get('/workshop/styletransferArt', function(){
-    return view('styletransferArt');
-});
+Route::get('/workshop/styletransferArt', 'FileController@create');
 
 Route::get('/workshop/styletransferPoem', function(){
     return view('styletransferPoem');

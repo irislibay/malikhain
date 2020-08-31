@@ -11,7 +11,7 @@
 
         @foreach($images as $image)
             <figure class="wiggly wiggle2">
-                <img src="/output/{{ $image }}" />
+                <img src="/output_image/{{ $image }}" />
             </figure>
         @endforeach
 
