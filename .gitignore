@@ -24,3 +24,4 @@ scripts/.env
 /public/output_poem
 
 .idea
+/public/js/app.js
