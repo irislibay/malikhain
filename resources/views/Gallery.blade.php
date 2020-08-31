@@ -1,4 +1,4 @@
-@extends('webLayout')
+@extends('layouts.web.index')
 
 @section('content')
 
@@ -39,7 +39,7 @@
 							</div>
 						</div>
 					</a>
-					
+
 				@endforeach
 			</div>
 		</div>

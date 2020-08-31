@@ -19,13 +19,13 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/workshop', function(){
+Route::get('/workshop', function () {
     return view('workshop');
 });
 
 Route::get('/workshop/styletransferArt', 'FileController@create');
 
-Route::get('/workshop/styletransferPoem', function(){
+Route::get('/workshop/styletransferPoem', function () {
     return view('styletransferPoem');
 });
 
@@ -45,4 +45,3 @@ Route::get('/ArtistPage/individual', function () {
 Route::resource('file', 'FileController');
 Route::resource('posts', 'PostsController');
 Route::resource('poem', 'PoemController');
-
