@@ -13,7 +13,7 @@ html, body {
 
 .container{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 40% 60%;
 	 grid-template-rows: 1fr 1fr;
 	 grid-template-areas:
 		 "box1 box2"
@@ -22,16 +22,159 @@ html, body {
 
 .box1{
 	grid-area: box1;
-	
+    position: fixed;
+    display: -webkit-box;
+	display: -ms-flexbox;
+    display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+    align-items: center;
+	-webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
 }
-.box1 img{
-	position: fixed;
-}
+
 .box2{
 	grid-area: box2;
+	position: relative;
+    display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+    align-items: center;
+	  -webkit-box-pack: center;
+	  -ms-flex-pack: center;
+    justify-content: center
 
 }
 .box3{
 	grid-area: box3;
-	align-items: center;
+	position: relative;
+    display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+    align-items: center;
+	  -webkit-box-pack: center;
+	  -ms-flex-pack: center;
+    justify-content: center
+}
+
+.box2 .card{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #232323;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 10px;
+	  margin-left: 10px;
+}
+.box2 .card img{
+	height: 100%;
+}
+.box2 .card:after{
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.05);
+}
+.box2 .card .contentbx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.box2 .card:hover .contentbx{
+    height: 180px;
+}
+.box2 .card .contentbx h2{
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.box2 .card .contentbx .paintName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.box2 .card:hover .contentbx .paintName{
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1.05s;
+}
+.box2 .card .contentbx .paintName h3{
+color: #fff;
+font-weight: 300;
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-right: 10px;
+}
+.box2 .card .contentbx a{
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.box2 .card:hover .contentbx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 1s;
+    background-color: #9bdc28;
+}
+.box3 .card-scroll{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f8c290;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 10px;
+	margin-left: 10px;
+}
+.box3 .card-scroll p{
+    margin-right: 10px;
+	margin-left: 10px;
+}
+.box1 .card-img{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: #f8c290;
+    border-radius: 20px;
+    z-index: 1;
+    overflow: hidden;
+    margin-right: 10px;
+	margin-left: 10px;
+}
+.box1 .card-img img{
+    height: 112%;
+    width: 100%;
 }

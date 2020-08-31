@@ -58,7 +58,7 @@
 							<p>He has contributed more than 24 designs for reproduction on UNICE’s greeting cards and are distributed worldwide.</p><button class="button">Know More</button>
 						</div>
 					</div>
-				</a><a class="card" href="#!">
+				</a><a class="card" href="/ArtistPage/individual">
 					<div class="front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg)">
 						<p>Pacita Abad</p>
 					</div>
