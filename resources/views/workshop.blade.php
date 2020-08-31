@@ -13,13 +13,13 @@
 				<span class="byline" style="color: white; font-family: 'Major Mono Display', cursive">Explore and experience the wonders of Artificial Intelligence</span> </div>
 			<div class="ebox1" data-aos="zoom-in"> <span class="fa fa-picture-o"></span>
 				<div class="title">
-					<h2 style="color: white">Are you an artist?</h2>
+					<h2 style="color: white">Are you an aspiring artist?</h2>
 					<span class="byline" style="color: white">Style-Content fusion with images</span> </div>
 				<p> Upload your digital artwork (.jpg, .png) and fuse it with a classical Filipino painter's work </p>
 				<a href="/workshop/styletransferArt" class="btn">Fuse my artwork!</a> </div>
 			<div class="ebox2" data-aos="zoom-in-up"><span class="fa fa-pencil"></span>
 				<div class="title" >
-					<h2 style="color: white">Are you a poet?</h2>
+					<h2 style="color: white">Do you like writing poetry?</h2>
 					<span class="byline" style="color: white">Style-Content fusion with text</span> </div>
 				<p style="color: white">Upload your poetry (.txt) and fuse it with a classical Filipino poet's work</p>
 				<a href="/workshop/styletransferPoem" class="btn">Fuse my poem!</a> </div>
