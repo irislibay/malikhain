@@ -39,9 +39,9 @@ COPY --chown=www-data:www-data . $LARAVEL_PATH/
 COPY ./.deploy/config/php/local.ini /usr/local/etc/php/conf.d/local.ini
 RUN chmod -R 775 $LARAVEL_PATH/storage
 
-RUN mkdir $LARAVEL_PATH/public/output_image
-RUN mkdir $LARAVEL_PATH/public/output_poem
-RUN mkdir $LARAVEL_PATH/public/uploads
+RUN mkdir -p $LARAVEL_PATH/public/output_image
+RUN mkdir -p $LARAVEL_PATH/public/output_poem
+RUN mkdir -p $LARAVEL_PATH/public/uploads
 RUN chmod -R 775 $LARAVEL_PATH/public/output_image
 RUN chmod -R 775 $LARAVEL_PATH/public/output_poem
 RUN chmod -R 775 $LARAVEL_PATH/public/uploads
