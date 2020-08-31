@@ -17,7 +17,7 @@ fi
 PYTHON_VERSION_COMMAND="$PYTHON_COMMAND -c 'import sys; print(\".\".join(map(str, sys.version_info[:3])))'"
 PYTHON_VERSION=$(eval "$PYTHON_VERSION_COMMAND")
 
-if [[ ! $PYTHON_VERSION == *"3.7"* ]]
+if [[ ! ( $PYTHON_VERSION =~ "3.7"* ) ]]
 then
     echo "Python installation found but project requires python 3.7"
     echo "Exiting..."
