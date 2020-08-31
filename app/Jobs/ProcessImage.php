@@ -61,7 +61,7 @@ class ProcessImage implements ShouldQueue
      */
     public function handle()
     {
-        $process = new Process(['scripts/venv/bin/python', 'scripts/neural_style/main.py', $this->file_path, $this->style_image]);
+        $process = Process::fromShellCommandline('bash scripts/neural_style/main.sh '.$this->file_path.' '.$this->style_image);
         $process->setTimeout(7200);
         $process->setIdleTimeout(7200);
         $process->run();
@@ -71,6 +71,7 @@ class ProcessImage implements ShouldQueue
             Log::error(new ProcessFailedException($process));
         }
 
+        Log::info($process->getOutput());
         File::destroy($this->file_id);
     }
 
