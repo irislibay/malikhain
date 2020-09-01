@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg text-uppercase navbar-light bg-transparent w-75 mx-auto pt-4">
 
-    <a href="/home"
+    <a href="{{ route('home') }}"
         class="h2 border-right border-light pr-3 py-1 font-weight-bold" style="font-family: 'Megrim', cursive; color: #FEBE7E;">
         malikh<strong style="color: #FFEDBC;">ai</strong>n
     </a>
@@ -19,8 +19,8 @@
         <ul class="navbar-nav">
 
             <li class="nav-item mx-3">
-                <a class="nav-link {{Request::path() === 'home' || Request::path() === '/' ? 'text-white' : 'text-malikhain-yellow'}}"
-                    href="/home"
+                <a class="nav-link {{ Request::path() === 'home' || Request::path() === '/' ? 'text-white' : 'text-malikhain-yellow' }}"
+                    href="{{ route('home') }}"
                     accesskey="1"
                     title="">
                     Home
@@ -28,8 +28,8 @@
             </li>
 
             <li class="nav-item mx-3">
-                <a class="nav-link {{Request::path() === 'workshop' ? 'text-white' : 'text-malikhain-yellow'}}"
-                    href="/workshop"
+                <a class="nav-link {{ Request::path() === 'workshop' ? 'text-white' : 'text-malikhain-yellow' }}"
+                    href="{{ route('workshop') }}"
                     accesskey="2"
                     title="">
                     Workshop
@@ -37,7 +37,7 @@
             </li>
 
             <li class="nav-item  mx-3">
-                <a class="nav-link {{Request::path() === 'Gallery' ? 'text-white' : 'text-malikhain-yellow'}}"
+                <a class="nav-link {{ Request::path() === 'Gallery' ? 'text-white' : 'text-malikhain-yellow' }}"
                     href="/Gallery"
                     accesskey="3"
                     title="">
@@ -46,7 +46,7 @@
             </li>
 
             <li class="nav-item mx-3">
-                <a class="nav-link {{Request::path() === 'ArtistPage' ? 'text-white' : 'text-malikhain-yellow'}}"
+                <a class="nav-link {{ Request::path() === 'ArtistPage' ? 'text-white' : 'text-malikhain-yellow' }}"
                     href="/ArtistPage"
                     accesskey="4"
                     title="">
