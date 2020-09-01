@@ -41,15 +41,30 @@ class PoemController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'poem' => 'required'
-        ]);
+        
 
-        if($validator->fails()) {
-            return back()->withErrors($validator->errors());
+        if($request->has('submitFile')){
+            $validator = Validator::make($request->all(), [
+                'poemTextFile' => 'required'
+            ]);
+
+            if($validator->fails()) {
+                return back()->withErrors($validator->errors());
+            }
+            
+            $text = file_get_contents($request->file('poemTextFile'));
+        } else if($request->has('submitText'))
+        {
+            $validator = Validator::make($request->all(), [
+                'poem' => 'required'
+            ]);
+
+            if($validator->fails()) {
+                return back()->withErrors($validator->errors());
+            }
+
+            $text = $request->input('poem');
         }
-
-        $text = $request->input('poem');
 
         Log::info($text);
 
@@ -60,7 +75,7 @@ class PoemController extends Controller
 
         if (!$process->isSuccessful()) {
             Log::error(new ProcessFailedException($process));
-            return back()->withErrors(['poem' => 'Unable to upload poem']);
+            return ($request->has('submitFile')) ? back()->withErrors(['poemFile' => 'Unable to upload poem']) : back()->withErrors(['poem' => 'Unable to upload poem']);
         }
 
         $output = $process->getOutput();
@@ -68,7 +83,7 @@ class PoemController extends Controller
         $current_timestamp = Carbon::now()->timestamp;
         FacadeFile::put('output_poem/'.$current_timestamp.'.txt',$output);
 
-        return back()->with("success", "Poem uploaded successfully")->with("output", $output);
+        return ($request->has('submitFile')) ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output) : back()->with("success", "Poem uploaded successfully")->with("output", $output);
     }
 
     /**
