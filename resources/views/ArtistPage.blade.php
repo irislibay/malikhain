@@ -50,16 +50,9 @@
 						<p>Creator of cultural touchstone.</p>
 						<p>He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. </p><button class="button">Know More</button>
 					</div>
-				</div>
-			</a>
-			<a class="card" href="#!">
-				<div class="front h3" style="font-family: 'Major Mono Display', monospace;  background-image: url(https://www.artcircle-gallery.com/wp-content/uploads/2017/03/13256243_1718585861758185_1750782011660232265_n.jpg)">
-					<p>Manuel Baldemor</p>
-				</div>
-				<div class="back">
-					<div>
-						<p>The folk artist.</p>
-						<p>He has contributed more than 24 designs for reproduction on UNICE’s greeting cards and are distributed worldwide.</p><button class="button">Know More</button>
+				</a><a class="card" href="/ArtistPage/individual">
+					<div class="front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg)">
+						<p>Pacita Abad</p>
 					</div>
 				</div>
 			</a>
