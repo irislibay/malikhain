@@ -1,4 +1,3 @@
-
 @extends('layouts.web.index')
 
 @section('content')
