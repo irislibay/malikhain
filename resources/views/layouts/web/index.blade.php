@@ -8,16 +8,16 @@
         @include('layouts.web.css')
     </head>
     {{-- TODO: Move this to app.css --}}
-    <body style="font-family: 'Baumans', cursive;">
+    <body style="font-family: 'Baumans', cursive;" class="h-100">
 
-        <div id="particleasdss-js">
-            {{-- Top navbar --}}
-            @include('layouts.web.navbar')
+        <div id="particles-js"></div>
 
-            {{-- Content --}}
-            <div class="container">
-                @yield('content')
-            </div>
+        {{-- Top navbar --}}
+        @include('layouts.web.navbar')
+
+        {{-- Content --}}
+        <div class="container">
+            @yield('content')
         </div>
 
         {{-- JS --}}

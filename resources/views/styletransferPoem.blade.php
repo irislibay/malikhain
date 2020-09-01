@@ -1,6 +1,9 @@
-<div id="particles-js"></div>
-
 @extends('layouts.web.index')
+
+@section('styles')
+    {{-- Separate CSS from app.css since not all pages are using particle.js --}}
+    <link href="{{ mix('css/particles.css') }}" rel="stylesheet">
+@endsection
 
 @section('content')
     <div class="text-white mb-5">
