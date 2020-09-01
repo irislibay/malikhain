@@ -1,5 +1,4 @@
-
-@extends('indivLayout')
+@extends('layouts.web.index')
 
 @section('content')
 
@@ -74,7 +73,6 @@
 
             </div>
         </div>
-
     </div><!--end container-->
 </div>
 
@@ -92,18 +90,18 @@ var scrollOffset = 300;
 
 
 // run this function when the window scrolls
-$(window).scroll(function() {  
-  
-   
-  // get the window height on scroll
-  var scroll = $(window).scrollTop() + scrollOffset;  
-  
+$(window).scroll(function() {
 
-  // if scroll hits the top of section 1  
+
+  // get the window height on scroll
+  var scroll = $(window).scrollTop() + scrollOffset;
+
+
+  // if scroll hits the top of section 1
   if ( scroll < 500 ) {
     $('.grid-image img').attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/495197/0st9yhngses-benjamin-child.jpg');
   }
-  
+
   // if scroll hits the top of section 2
   if ( scroll > section2 ) {
     $('.grid-image img').attr('src', 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/495197/2fgvaqx-fxs-oskar-krawczyk.jpg');

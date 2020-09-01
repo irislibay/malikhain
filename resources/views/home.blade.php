@@ -1,29 +1,37 @@
-@extends('webLayout')
+@extends('layouts.web.index')
 
 @section('content')
 
+    <div class="row border-bottom mt-5 pb-5">
+        <div class="col p-4">
+            <div class="text-white text-right" data-aos="zoom-in-up" >
 
+                <p class="drop-shadow h1 font-weight-bold"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                    style="font-family: 'Major Mono Display', cursive">
+                    Bridging the world of art and technology.
+                </p>
 
+                <p class="h3 mt-3" data-aos="flip-left">
+                    Welcome, young artist!
+                </p>
 
+                <p class="h5 mt-3" data-aos="flip-up">
+                    <strong class=" h4 text-white font-weight-light" style="font-family: 'Megrim', cursive">malikhain</strong> is a web application that creates a fusion of your own masterpiece
+                </p>
 
-<div id="wel">
+                <p class="h5 mt-3" data-aos="flip-up">
+                    and a classic Filipino artist's masterpiece using Deep Artificial Networks.
+                </p>
 
-    <div class=logo></div>
-	<div class="tray" data-aos="zoom-in-up" >
-		<h2 data-aos="fade-up"
-        data-aos-duration="2000" style="color: white; font-family: 'Major Mono Display', cursive">Bridging the world of art and technology.</h2>
-        <p style="font-size: 37px; color: white; text-align: right; " data-aos="flip-left">Welcome, young artist!</p>
-        <p style="font-size: 27px; color: white; text-align: right;" data-aos="flip-up"><strong style="color: white; font-family: 'Megrim', cursive">malikhain</strong> is a web application that creates a fusion of your own masterpiece 
-        <p style="font-size: 27px; color: white; text-align: right;" data-aos="flip-up"> and a
-        classic Filipino artist's masterpiece using Deep Artificial Networks.</p>
-        <a href="/workshop" class="btn">I want to try!</a> </div>
+                <a href="{{ route('workshop') }}"
+                    class="btn btn-sm border-round p-4 m-3 text-white rounded">
+                    I want to try!
+                </a>
 
-</div>
-
-<div id="copyright" class="tray">
-    <p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
-
-
+            </div>
+        </div>
+    </div>
 
 @endsection

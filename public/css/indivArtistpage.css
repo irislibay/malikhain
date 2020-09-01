@@ -2,9 +2,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 @import url("https://fonts.googleapis.com/css?family=Baumans|Special+Elite|Questrial|Reenie+Beanie:300,400,500,600,700");
 
-*
-{
-	margin:0; padding:0; box-sizing:border-box;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html, body {	
 	 height: 100%;
@@ -232,5 +234,4 @@ margin-right: 10px;
 .box1 .card-img img{
     height: 112%;
     width: 100%;
-
 }

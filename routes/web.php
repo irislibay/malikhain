@@ -11,40 +11,38 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('home');
+})->name('home');
+
+// Redirect "/home" to "/"
+Route::get('home', function () {
+    return redirect(route('home'));
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
-Route::get('/workshop', function(){
+Route::get('workshop', function () {
     return view('workshop');
-});
+})->name('workshop');
 
-Route::get('/workshop/styletransferArt', function(){
-    return view('styletransferArt');
-});
+Route::get('workshop/styletransferArt', 'FileController@create');
 
-Route::get('/workshop/styletransferPoem', function(){
+Route::get('workshop/styletransferPoem', function () {
     return view('styletransferPoem');
 });
 
 // Route::get('/Gallery', function () {
 //     return view('Gallery');
 // });
-Route::get('/Gallery', 'FileController@index')->name('index');
+Route::get('Gallery', 'FileController@index')->name('index');
 
-Route::get('/ArtistPage', function () {
+Route::get('ArtistPage', function () {
     return view('ArtistPage');
 });
 
-Route::get('/ArtistPage/individual', function () {
+Route::get('ArtistPage/individual', function () {
     return view('individual');
 });
 
 Route::resource('file', 'FileController');
 Route::resource('posts', 'PostsController');
 Route::resource('poem', 'PoemController');
-

@@ -17,7 +17,7 @@ fi
 PYTHON_VERSION_COMMAND="$PYTHON_COMMAND -c 'import sys; print(\".\".join(map(str, sys.version_info[:3])))'"
 PYTHON_VERSION=$(eval "$PYTHON_VERSION_COMMAND")
 
-if [[ ! $PYTHON_VERSION == *"3.7"* ]]
+if [[ ! ( $PYTHON_VERSION =~ "3.7"* ) ]]
 then
     echo "Python installation found but project requires python 3.7"
     echo "Exiting..."
@@ -51,6 +51,8 @@ echo "Installing python requirements..."
 ./venv/bin/pip  --no-cache-dir install -r requirements.txt
 echo "Installed python requirements"
 
+mkdir neural_style/models
+
 if [ ! -f neural_style/models/vgg19-d01eb7cb.pth ]; then
     echo "neural_style/models/svgg19-d01eb7cb.pth not found"
     echo "Downloading file..."
@@ -60,6 +62,7 @@ if [ ! -f neural_style/models/vgg19-d01eb7cb.pth ]; then
     echo "File downloaded"
 fi
 
+mkdir gpt/models
 GPT_MODEL_FOLDERS=("gpt/models/100_fal" "gpt/models/model_name")
 
 for gpt_folder in "${GPT_MODEL_FOLDERS[@]}"
@@ -101,5 +104,18 @@ do
         curl -o gpt/models/model_name/"$file" https://minio.hitch-dev.tedhouse.org/public/tmp/model_name/"$file"
     fi
 done
+
+chmod -R 775 "*"
+chown -R www-data:www-data "*"
+
+mkdir /var/www/.config
+mkdir /var/www/.config/matplotlib
+mkdir /var/www/.cache
+mkdir /var/www/.cache/matplotlib
+
+chmod -R 775 /var/www/.config
+chown -R www-data:www-data /var/www/.config
+chmod -R 775 /var/www/.cache
+chown -R www-data:www-data /var/www/.cache
 
 echo "Installation complete"
