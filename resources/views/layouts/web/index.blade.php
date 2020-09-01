@@ -10,12 +10,14 @@
     {{-- TODO: Move this to app.css --}}
     <body style="font-family: 'Baumans', cursive;">
 
-        {{-- Top navbar --}}
-        @include('layouts.web.navbar')
+        <div id="particleasdss-js">
+            {{-- Top navbar --}}
+            @include('layouts.web.navbar')
 
-        {{-- Content --}}
-        <div class="container">
-            @yield('content')
+            {{-- Content --}}
+            <div class="container">
+                @yield('content')
+            </div>
         </div>
 
         {{-- JS --}}
