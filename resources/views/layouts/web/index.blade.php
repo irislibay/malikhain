@@ -23,5 +23,6 @@
         {{-- JS --}}
         @include('layouts.web.js')
 
+
     </body>
 </html>
