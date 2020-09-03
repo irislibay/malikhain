@@ -16,7 +16,8 @@
                 <div class="back">
                     <div>
                         <p>National Artist.</p>
-                        <p>A Filipino painter of Chinese descent and was a National Artist for Visual Arts.</p><button class="button">Know more</button>
+                        <p>A Filipino painter of Chinese descent and was a National Artist for Visual Arts.</p>
+                        <button class="button">Know more</button>
                     </div>
                 </div>
             </a>
@@ -27,7 +28,8 @@
                 <div class="back">
                     <div>
                         <p>National hero of the Filipino people.</p>
-                        <p>An ophthalmologist by profession, a writer, and a key member of the Filipino Propaganda Movement.</p><button class="button">Know More</button>
+                        <p>An ophthalmologist by profession, a writer, and a key member of the Filipino Propaganda Movement.</p
+                            ><button class="button">Know More</button>
                     </div>
                 </div>
             </a>
@@ -38,7 +40,8 @@
                 <div class="back">
                     <div>
                         <p>World-renowned artist.</p>
-                        <p>Gold-medalist in 1884 Madrid Exposition of Fine Arts.</p><button class="button">Know More</button>
+                        <p>Gold-medalist in 1884 Madrid Exposition of Fine Arts.</p>
+                        <button class="button">Know More</button>
                     </div>
                 </div>
             </a>
@@ -49,7 +52,8 @@
                 <div class="back">
                     <div>
                         <p>Creator of cultural touchstone.</p>
-                        <p>He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. </p><button class="button">Know More</button>
+                        <p>He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. </p
+                            ><button class="button">Know More</button>
                     </div>
                 </div>
             </a>
@@ -60,7 +64,20 @@
                 <div class="back">
                     <div>
                         <p>TOYM-awardee. <br>(Ten Outstanding Young Men)</p>
-                        <p>Pacita Abad became the first woman ever to receive this prestigious award.</p><button class="button">Know More</button>
+                        <p>Pacita Abad became the first woman ever to receive this prestigious award.</p>
+                        <button class="button">Know More</button>
+                    </div>
+                </div>
+            </a>
+            <a class="card james-transparent" href="/ArtistPage/individual">
+                <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://www.artcircle-gallery.com/wp-content/uploads/2017/03/13256243_1718585861758185_1750782011660232265_n.jpg)">
+                    <p>Manuel Baldemor</p>
+                </div>
+                <div class="back">
+                    <div>
+                        <p>The folk artist.</p>
+                        <p>He has contributed more than 24 designs for reproduction on UNICE’s greeting cards and are distributed worldwide.</p>
+                        <button class="button">Know More</button>
                     </div>
                 </div>
             </a>

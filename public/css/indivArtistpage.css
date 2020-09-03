@@ -8,11 +8,6 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 .box1 {
     position: relative;
     display: -webkit-box;

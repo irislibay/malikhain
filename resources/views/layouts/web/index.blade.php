@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
     <head>
         {{-- Meta tags --}}
         @include('layouts.web.meta')
@@ -22,7 +22,6 @@
 
         {{-- JS --}}
         @include('layouts.web.js')
-
 
     </body>
 </html>
