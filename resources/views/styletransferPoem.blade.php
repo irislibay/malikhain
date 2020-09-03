@@ -57,13 +57,12 @@
                                     {{ $errors->first('poemFile') }}
                                 </span>
                                 <button type="submit" name="submitFile" id="submitFile"
-                                    class="btn btn-success btn-sm mr-2">
+                                    class="btn btn-success btn-sm my-4">
                                     Fuse File
                                 </button>
                             </div>
                         </div>
                         <div class="col-12 m-auto">
-                            <br>
                             <div class="row">
                                 <div class="col-5"><hr class="bg-white"></div>
                                 <div class="col-2 text-white">OR</div>
@@ -110,33 +109,27 @@
             </div>
 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                {{-- TODO: What is this form for? --}} <!-- either go to profile or download output as text -->
-                <form>
-                    <div class="card col-12 mb-5 bg-transparent border border-white">
-                        <div class="card-body text-white">
-                            <div class="col-12 bg-light border border-white text-dark text-left overflow-auto"
-                                style="height: 50em;">
-
-                                @if(Session::has('output'))
-                                    {!! Session::get('output') !!}
-                                    @php
-                                        Session::forget('output');
-                                    @endphp
-                                @endif
-
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col"></div>
-                                <button class="col btn btn-success btn-sm mr-2">
-                                    Profile
-                                </button>
-                                <button class="col btn btn-success btn-sm">
-                                    Download
-                                </button>
+                <div class="card col-12 mb-5 bg-transparent border border-white">
+                    <div class="card-body text-white">
+                        <div class="col-12 bg-light border border-white text-dark text-left overflow-auto"
+                            style="height: 50em;">
+                            <div id="output">@if(Session::has('output'))
+                                {!! Session::get('output') !!}
+                                @php
+                                    Session::forget('output');
+                                @endphp
+                            @endif
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <a href="#link" class="btn btn-success btn-sm" role="button">Profile</a>
+                            <button onclick="download()" class="col btn btn-success btn-sm" id="downloadLink">
+                                Download
+                            </button>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
@@ -175,6 +168,15 @@
             // add the currently selected option to $imageContainer
             $imagecontainer[0].dataset.selected = selection;
         }, 1500);
+        }
+
+        function download() {
+            var a = document.body.appendChild(
+               document.createElement("a")
+            );
+           a.download = "newfile.txt";
+           a.href = "data:text/html," + document.getElementById("output").innerHTML;
+           a.click(); //Trigger a click on the element
         }
     </script>
 
