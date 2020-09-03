@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
     <head>
         {{-- Meta tags --}}
         @include('layouts.web.meta')

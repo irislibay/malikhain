@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Baumans|Abel|Megrim|Major+Mono+Display|Questrial|Montserrat+Subrayada|Rock+Salt:300,400,500,600,700");
 
-html,
-body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background: linear-gradient(-50deg, #2C73D2, #845EC2, #0089BA, #008F7A);
     background-size: 100% 100%;
@@ -31,7 +23,6 @@ body {
         background-position: 0% 50%;
     }
 }
-
 
 .drop-shadow {
     text-shadow: -1px -1px 0px #D1CFCE,

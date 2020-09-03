@@ -2,7 +2,7 @@
 <link href="/css/gallery.css" rel="stylesheet"/>
 <link href="/css/indivArtistpage.css" rel="stylesheet"/>
 <link href="/css/artistpage.css" rel="stylesheet"/>
-<link href="/css/gallery.css" rel="stylesheet"/>
+{{-- <link href="/css/gallery.css" rel="stylesheet"/> --}}
 
 {{-- Generated CSS --}}
 <link href="{{ mix('css/app.css') }}" rel="stylesheet">
