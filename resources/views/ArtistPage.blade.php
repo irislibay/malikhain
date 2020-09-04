@@ -8,7 +8,7 @@
         </div>
         <div id="card" class="border-bottom pb-5">
             <div class="content">
-                <a class="card james-transparent" href="#!">
+                <a class="card james-transparent" href="/ArtistPage/AngKiukok">
                     <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://3.bp.blogspot.com/-bKf33Aw6UH4/TwumHHTFU-I/AAAAAAAAEHg/-AZVlFsnFVY/s640/Ang+Kiukok+2.jpg)">
                         <p>Ang Kiukok</p>
                     </div>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="card james-transparent" href="#!">
+                <a class="card james-transparent" href="/ArtistPage/JoseRizal">
                     <div class="front h3 " style="font-family: 'Major Mono Display', monospace;  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b0/Jose_rizal_01.jpg)">
                         <p>Jose Rizal</p>
                     </div>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="card james-transparent" href="#!">
+                <a class="card james-transparent" href="/ArtistPage/JuanLuna">
                     <div class="front h3" style="font-family: 'Major Mono Display', monospace;  background-image: url(https://images.summitmedia-digital.com/esquiremagph/images/2017/01/20/juan.png)">
                         <p>Juan Luna</p>
                     </div>
@@ -44,8 +44,8 @@
                         </div>
                     </div>
                 </a>
-                <a class="card james-transparent" href="/ArtistPage/individual">
-                    <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg/330px-Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg)">
+                <a class="card james-transparent" href="/ArtistPage/FranciscoBalagtas">
+                    <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg)">
                         <p>Francisco Balagtas</p>
                     </div>
                     <div class="back">
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="card james-transparent" href="/ArtistPage/individual">
+                <a class="card james-transparent" href="/ArtistPage/PacitaAbad">
                     <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg)">
                         <p>Pacita Abad</p>
                     </div>
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="card james-transparent" href="/ArtistPage/individual">
+                <a class="card james-transparent" href="/ArtistPage/ManuelBaldemor">
                     <div class="front h3" style="font-family: 'Major Mono Display', monospace; background-image: url(https://www.artcircle-gallery.com/wp-content/uploads/2017/03/13256243_1718585861758185_1750782011660232265_n.jpg)">
                         <p>Manuel Baldemor</p>
                     </div>

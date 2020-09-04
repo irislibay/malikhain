@@ -39,8 +39,28 @@ Route::get('ArtistPage', function () {
     return view('ArtistPage');
 });
 
-Route::get('ArtistPage/individual', function () {
-    return view('individual');
+Route::get('ArtistPage/PacitaAbad', function () {
+    return view('Abad');
+});
+
+Route::get('ArtistPage/AngKiukok', function () {
+    return view('Ang');
+});
+
+Route::get('ArtistPage/FranciscoBalagtas', function () {
+    return view('Balagtas');
+});
+
+Route::get('ArtistPage/ManuelBaldemor', function () {
+    return view('Baldemor');
+});
+
+Route::get('ArtistPage/JuanLuna', function () {
+    return view('Luna');
+});
+
+Route::get('ArtistPage/JoseRizal', function () {
+    return view('Rizal');
 });
 
 Route::resource('file', 'FileController');

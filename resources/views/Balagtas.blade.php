@@ -3,11 +3,11 @@
 @section('content')
     <div id="artist" class="container-fluid">
         <div class="d-flex">
-            <div class="col-5 box1">
+            <div class="col-4 box1">
                 <div class="card-img">
                     <div class="content">
                         <div class="front">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg"/>
+                            <img src="https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg"/>
                         </div>
                         <div class="back">
                             Achievements Here!
@@ -15,7 +15,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-8">
                 <div class="row row-nest">
                     <div class="col-12 box2">
                         <div class="card" style="">
@@ -66,30 +66,36 @@
                     <div class="col-12 overbox">
                         <div class="box3">
                             <div class="card-scroll">
-                                <h2>Pacita Barsana Abad</h2>
-                                <p>Alma mater: University of the Philippines Diliman, Lone Mountain College/University of San Francisco<br>
-                                    Birthdate: October 5 1946<br>
-                                    Deathdate: December 7 2004<br>
-                                    Age: 58<br>
-                                    AKA: -<br>
-                                    Spouse: Jack Garrity
+                                <h2>Francisco Balagtas y de la Cruz</h2>
+                                <p>Alma mater: Colegio de San Jose <br>
+                                    Birthdate: April 2 1788<br>
+                                    Deathdate: Feb 20 1862<br>
+                                    Age: 73<br>
+                                    AKA: Francisco Baltazar, Kiko Balagtas<br>
+                                    Spouse: Juana Tiambeng
                                     </p>
                             </div>
                         </div>
                         <div class="box4">
                             <div class="card-scroll">
-                                <h2>Life of Pacita Abad</h2>
+                                <h2>Life of Francisco Balagtas</h2>
                                 <p class="text-justify">
-                                    Both of Abad's parents served, at different times, as Congressman/Congresswomen of Batanes, and Abad earned a BA in political science at the University of the Philippines Diliman in 1967. In 1970, she went to the United States intending to study law, but she instead earned a master's degree in Asian history at Lone Mountain College (which would later become part of the University of San Francisco) in 1972 while supporting herself as a seamstress and a typist. Abad studied painting at the Corcoran School of Art in Washington, D.C. and The Art Students League in New York City. She lived on six continents and worked in more than 50 countries, including Guatemala, Mexico, India, Afghanistan, Yemen, Sudan, Mali, Papua New Guinea, Cambodia, and Indonesia. At the Corcoran School of Art, Abad studied under Berthold Schmutzhart and Blaine Larson, and the two professors helped launch her artistic career.
+                                    a prominent Filipino poet during the Spanish colonial period of the Philippines. He is widely considered one of the greatest Filipino literary laureates for his impact on Filipino literature. The famous epic Florante at Laura is regarded as his defining work.
                                 </p>
                                 <p class="text-justify">
-                                    During Abad's time in San Francisco's art scene, she married painter George Kleiman, though they later separated. She traveled to art scenes across Asia for a year with Stanford business student Jack Garrity, then returned to the U.S. to study painting, first at the Corcoran School of Art in Washington D.C. and later, at The Art Students League in New York City. While in California, she married Garrity, who became an international development economist.
+                                    Francisco Balagtas learned to write poetry from José de la Cruz (Joseng Sisiw), one of the most famous poets of Tondo, in return for chicks. It was De la Cruz himself who personally challenged Balagtas to improve his writing. Balagtas swore he would overcome Huseng Sisiw as he would not ask for anything in return as a poet.
                                 </p>
                                 <p class="text-justify">
-                                    Abad created over 4,500 artworks in her career. Her early paintings were primarily figurative socio-political works of people and primitive masks. Another series was large scale paintings of underwater scenes, tropical flowers, and animal wildlife. Pacita's most extensive body of work, however, is her vibrant, colorful abstract work - many very large scale canvases, but also a number of small collages - on a range of materials from canvas and paper to bark cloth, metal, ceramics, and glass. She painted the 55-meter long Alkaff Bridge in Singapore and covered it with 2,350 multicolored circles, just a few months before she died of lung cancer in 2004 in Singapore.
+                                    In 1835, Balagtas moved to Pandacan, Manila, where he met María Asunción Rivera, who would effectively serve as the muse for his future works. She is referenced in Florante at Laura as 'Selya' and 'MAR'.
                                 </p>
                                 <p class="text-justify">
-                                    Abad developed a technique of trapunto painting (named after a quilting technique), which entailed stitching and stuffing her painted canvases to give them a three-dimensional, sculptural effect. She then began incorporating into the surface of her paintings materials such as traditional cloth, mirrors, beads, shells, plastic buttons, and other objects.
+                                    Balagtas' affections for MAR were challenged by the influential Mariano Capule. The latter won the battle for MAR when he used his wealth to get Balagtas imprisoned. It was here that he wrote Florante at Laura—in fact, the events of this poem were meant to parallel his own situation. He wrote his poems in the Tagalog language, during an age when Filipino writing was predominantly written in Spanish.
+                                </p>
+                                <p class="text-justify">
+                                    Balagtas published "Florante at Laura" upon his release in 1838. He moved to Balanga, Bataan, in 1840 where he served as the assistant to the Justice of the Peace. He was also appointed as the translator of the court. He married Juana Tiambeng on July 22, 1842.They had eleven children but only four survived to adulthood.
+                                </p>
+                                <p class="text-justify">
+                                    He sold his land and all of his riches, in order for him to be imprisoned in 1861, and continued writing poetry, along with translating Spanish documents, but he died a year later—on February 20, 1862, at the age of 73. Upon his deathbed, he asked the favor that none of his children become poets like him, who had suffered under his gift as well as under others. He even went as far as to tell them it would be better to cut their hands off than let them be writers.
                                 </p>
                             </div>
                         </div>

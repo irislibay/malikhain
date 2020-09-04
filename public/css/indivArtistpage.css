@@ -7,7 +7,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 .box1 {
     position: relative;
     display: -webkit-box;
@@ -19,6 +18,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
 }
 
 .box2 {
@@ -56,29 +56,21 @@
     overflow: hidden;
     margin-right: 10px;
     margin-bottom: 10px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .box2 .card img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .box2 .card:hover img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
     filter: blur(3px);
 }
-
-.box2 .card .lebady {
-    height: 170%;
-}
-
-.box2 .card:hover .lebady {
-    height: 170%;
-    filter: blur(3px);
-}
-
 .box2 .card .contentbx {
     position: absolute;
     bottom: 0;
@@ -173,8 +165,7 @@
 .box1 .card-img {
     position: relative;
     border-radius: 10px;
-    margin-top: 40px;
-    width: 100%;
+    margin-top: 20px;
     height: 660px;
     perspective: 1000px;
 }
@@ -223,6 +214,7 @@
 .box1 .card-img .content .front img {
     width: 110%;
     height: 100%;
+    object-fit: cover;
 }
 
 
