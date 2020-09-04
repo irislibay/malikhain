@@ -51,7 +51,7 @@
     width: 200px;
     height: 200px;
     background: #232323;
-    border-radius: 20px;
+    border-radius: 10px;
     z-index: 10;
     overflow: hidden;
     margin-right: 10px;
@@ -94,6 +94,7 @@
 }
 
 .box2 .card .contentbx h2 {
+    
     position: relative;
     font-weight: 700;
     letter-spacing: 1px;
@@ -130,7 +131,7 @@
 .box2 .card .contentbx a {
     display: inline-block;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 10px;
     text-decoration: none;
     font-weight: 700;
@@ -159,7 +160,7 @@
 
 .box1 .card-img .mainbx a {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     display: inline-block;
     justify-content: center;
@@ -171,7 +172,7 @@
 
 .box1 .card-img {
     position: relative;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 40px;
     width: 100%;
     height: 660px;
@@ -180,7 +181,7 @@
 
 .box1 .card-img .content {
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
     transition: transform 1s;
@@ -203,7 +204,7 @@
     color: #03446A;
     text-align: center;
     font-size: 60px;
-    border-radius: 20px;
+    border-radius: 10px;
     backface-visibility: hidden;
 }
 
@@ -214,7 +215,7 @@
 
 .box1 .card-img .content .front {
 
-    border-radius: 20px;
+    border-radius: 10px;
 
     overflow: hidden;
 }
@@ -228,8 +229,9 @@
 .box3 .card-scroll,
 .box4 .card-scroll {
     position: relative;
-    background: #f8c290;
-    border-radius: 20px;
+    background: linear-gradient(135deg, #845EC2, #FFC75F);
+    color: #fff;
+    border-radius: 10px;
     z-index: 1;
     overflow: hidden;
     margin-top: 10px;
@@ -238,7 +240,8 @@
 
 .box3 .card-scroll h2,
 .box4 .card-scroll h2 {
-    font-size: 50px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 40px;
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 10px;
@@ -246,6 +249,7 @@
 
 .box3 .card-scroll p,
 .box4 .card-scroll p {
+    font-family: 'Questrial', monospace;
     font-size: 20px;
     margin-right: 20px;
     margin-left: 20px;
