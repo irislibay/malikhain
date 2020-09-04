@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <div class="text-white mb-5">
+    <div class="container text-white mb-5">
         <div class="text-center my-5"
             data-aos="fade-up"
             data-aos-duration="2000">

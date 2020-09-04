@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="">
+    <div id="artist" class="container-fluid">
         <div class="d-flex">
             <div class="col-5 box1">
                 <div class="card-img">
