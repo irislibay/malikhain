@@ -16,7 +16,7 @@
         @include('layouts.web.navbar')
 
         {{-- Content --}}
-        <div class="container">
+        <div class="d-flex">
             @yield('content')
         </div>
 
