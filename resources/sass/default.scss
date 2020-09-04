@@ -1,8 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Baumans|Abel|Megrim|Major+Mono+Display|Questrial|Montserrat+Subrayada|Rock+Salt:300,400,500,600,700");
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
+    margin: 0;
     background: linear-gradient(-50deg, #2C73D2, #845EC2, #0089BA, #008F7A);
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     animation: gradient 10s ease infinite;
     font-family: "Baumans", cursive;
     font-size: 12pt;
