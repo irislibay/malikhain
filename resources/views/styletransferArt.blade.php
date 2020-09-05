@@ -76,7 +76,8 @@
                                 <input type="file"
                                     name="filename"
                                     id="filename"
-                                    class="form-control-file border border-white">
+                                    class="form-control-file border border-white"
+                                    accept="image/x-png,image/jpeg">
                                 <span class="text-danger">
                                     {{ $errors->first('filename') }}
                                 </span>
