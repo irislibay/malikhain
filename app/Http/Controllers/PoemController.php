@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
-use Symfony\Component\Process\Exception\ProcessFailedException;
-use Symfony\Component\Process\Process;
 use Illuminate\Support\Facades\File as FacadeFile;
 use Carbon\Carbon;
+use GuzzleHttp\Client as HttpClient;
+use Throwable;
 
 
 class PoemController extends Controller
@@ -36,13 +36,12 @@ class PoemController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function store(Request $request)
     {
-        
-
         if($request->has('submitFile')){
             $validator = Validator::make($request->all(), [
                 'poemTextFile' => 'required'
@@ -51,10 +50,9 @@ class PoemController extends Controller
             if($validator->fails()) {
                 return back()->withErrors($validator->errors());
             }
-            
+
             $text = file_get_contents($request->file('poemTextFile'));
-        } else if($request->has('submitText'))
-        {
+        } else if($request->has('submitText')) {
             $validator = Validator::make($request->all(), [
                 'poem' => 'required'
             ]);
@@ -66,24 +64,35 @@ class PoemController extends Controller
             $text = $request->input('poem');
         }
 
-        Log::info($text);
+//        Log::info($text);
 
-        $process = new Process(['../scripts/venv/bin/python', '../scripts/gpt/main.py', $text]);
-        $process->setTimeout(3600);
-        $process->setIdleTimeout(3600);
-        $process->run();
+        $client = new HttpClient();
 
-        if (!$process->isSuccessful()) {
-            Log::error(new ProcessFailedException($process));
-            return ($request->has('submitFile')) ? back()->withErrors(['poemFile' => 'Unable to upload poem']) : back()->withErrors(['poem' => 'Unable to upload poem']);
+        try {
+            $result = $client->post(config('app.malikhain_flask_api_base_url').'/gpt/text', [
+                'json' => [
+                    'text' => $text
+                ]
+            ]);
+        } catch (Throwable $e) {
+            Log::error($e);
+
+            return $request->has('submitFile')
+                ? back()->with("errorFile", "Unable to upload file")
+                : back()->with("error", "Unable to read text");
         }
 
-        $output = $process->getOutput();
-        Log::info($output);
-        $current_timestamp = Carbon::now()->timestamp;
-        FacadeFile::put('output_poem/'.$current_timestamp.'.txt',$output);
+        $body = json_decode($result->getBody());
+        $output = $body->text;
 
-        return ($request->has('submitFile')) ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output) : back()->with("success", "Poem uploaded successfully")->with("output", $output);
+//        Log::info($output);
+
+        $current_timestamp = Carbon::now()->timestamp;
+        FacadeFile::put('output_poem/'.$current_timestamp.'.txt', $output);
+
+        return $request->has('submitFile')
+            ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output)
+            : back()->with("success", "Poem uploaded successfully")->with("output", $output);
     }
 
     /**
