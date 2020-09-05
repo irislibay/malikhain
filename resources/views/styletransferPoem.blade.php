@@ -113,7 +113,7 @@
                     <div class="card-body text-white">
                         <div class="col-12 bg-light border border-white text-dark text-left overflow-auto"
                             style="height: 50em;">
-                            <div id="output">@if(Session::has('output'))
+                            <div id="output">this is sample output<br>newline goes here<br>@if(Session::has('output'))
                                 {!! Session::get('output') !!}
                                 @php
                                     Session::forget('output');
@@ -174,8 +174,10 @@
             var a = document.body.appendChild(
                document.createElement("a")
             );
+           const regex = /(< ?br ?>)/g;
            a.download = "newfile.txt";
-           a.href = "data:text/html," + document.getElementById("output").innerHTML;
+           const text = document.getElementById("output").innerHTML.replaceAll(regex, '%0D%0A');
+           a.href = "data:text/html," + text;
            a.click(); //Trigger a click on the element
         }
     </script>
