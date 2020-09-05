@@ -42,7 +42,7 @@
                         method="post"
                         enctype="multipart/form-data">
                         <div class="form-group" {{ $errors->has('poemFile') ? 'has-error' : '' }}>
-                            <div class="card-header bg-info text-white" color="#F3EEC3">
+                            <div class="card-header bg-info text-white text-center" color="#F3EEC3">
                                 <p class="text-left">Choose a text file:</p>
                                 @if(Session::has('successFile'))
                                 <div class="alert alert-success">
