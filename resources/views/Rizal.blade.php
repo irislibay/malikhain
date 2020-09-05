@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -21,33 +21,30 @@
                         <div class="card" style="">
                             <img class="" src="https://images-na.ssl-images-amazon.com/images/I/413QNJdHR2L._SX336_BO1,204,203,200_.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>Mi Ultimo Adios</h3>
+                                    <h2>(1896)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Noli2ndedition.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 2</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Noli Me Tangere</h3>
+                                    <h2>(1887)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/First_page_of_El_filibusterismo_manuscript.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 3</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>El Filibusterismo</h3>
+                                    <h2>(1891)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 

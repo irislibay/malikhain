@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -24,44 +24,40 @@
                         <div class="card" style="">
                             <img class="" src="https://live.staticflickr.com/702/21396286192_f81ad412e0_k.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>¿A Do...Va la Nave?</h3>
+                                    <h2>(1885)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/The_Battle_of_Lepanto_of_1571_full_version_by_Juan_Luna.jpg/1280px-The_Battle_of_Lepanto_of_1571_full_version_by_Juan_Luna.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 2</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>The Battle of Lepanto</h3>
+                                    <h2>(1887)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://qph.fs.quoracdn.net/main-qimg-47cb506683f002e823747e0da5f81113"/>
                             <div class="contentbx">
-                                <h2>Paint 3</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Spoliarium</h3>
+                                    <h2>(1884)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Death_of_Cleopatra_by_Juan_Luna1881.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 4</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>La Muerte de Cleopatra</h3>
+                                    <h2>(1881)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 

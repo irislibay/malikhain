@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -40,44 +40,40 @@
                         <div class="card" style="">
                             <img class="" src="https://media.mutualart.com/Images/2019_07/02/02/021543070/8b964853-be28-464c-ab83-50001196232b_570.Jpeg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>Misa de Gallo</h3>
+                                    <h2>(1999)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://galeriey.com/wp-content/uploads/2014/10/Manuel-Baldemor-La-Tenuana-Family-24-x-24-in-Acrylic-1.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 2</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>La Tenuana Family</h3>
+                                    <h2>(2014)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://www.artcircle-gallery.com/wp-content/uploads/2016/12/filipino-fam-1.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 3</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Homage to the Filipino Family</h3>
+                                    <h2>(2016)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://i.pinimg.com/originals/56/b9/61/56b9612cf1103817d338aa8d78e388ef.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 4</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Pahiyas Celebration</h3>
+                                    <h2>(2016)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 

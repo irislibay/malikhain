@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -34,44 +34,40 @@
                         <div class="card" style="">
                             <img class="" src="https://i.ocula.com/anzax/fd/fda855b1-39fa-4216-8696-2464b7ad3a1d_750_557.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>Stained Glass</h3>
+                                    <h2>(2000)</h2>                                 
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 2</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Filipinas in Hong Kong</h3>
+                                    <h2>(1995)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 3</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Water of Life</h3>
+                                    <h2>(1980)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 4</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>L.A. Liberty</h3>
+                                    <h2>(1992)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 

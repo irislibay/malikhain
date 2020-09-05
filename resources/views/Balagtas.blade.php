@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -24,11 +24,10 @@
                         <div class="card" style="">
                             <img class="" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1537423914l/41859549._SY475_.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>Florante at Laura</h3>
+                                    <h2>(1969)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
@@ -77,8 +76,7 @@
                             </div>
                         </div>
                     </div>
-            </div>
-
+                </div>
             </div>
         </div>
     </div>

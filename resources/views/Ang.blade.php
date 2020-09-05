@@ -1,7 +1,7 @@
 @extends('layouts.web.index')
 
 @section('content')
-    <div id="artist" class="container-fluid">
+    <div id="artist" class="container-fluid" data-aos="fade-in" data-aos-duration="2000">
         <div class="d-flex">
             <div class="col-4 box1">
                 <div class="card-img">
@@ -29,44 +29,40 @@
                         <div class="card" style="">
                             <img class="" src="https://images.summitmedia-digital.com/spotph/images/articles/ang_kiukok_man_on_fire.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 1</h2>
                                 <div class="paintName">
-                                    <h3>A Starry Night</h3>
+                                    <h3>Man on Fire</h3>
+                                    <h2>(1980)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://images.summitmedia-digital.com/spotph/images/articles/ang_kiukok_thinking_man.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 2</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Thinking Man</h3>
+                                    <h2>(1975)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="https://media.mutualart.com/Images/2018_12/14/14/140954726/a931440f-d860-4e59-a429-2d395726ab02_570.Jpeg"/>
                             <div class="contentbx">
-                                <h2>Paint 3</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Fishermen</h3>
+                                    <h2>(1981)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
                         <div class="card" style="">
                             <img class="" src="http://gallerybig.com/gallerybigimages/whatsnewkiukok.jpg"/>
                             <div class="contentbx">
-                                <h2>Paint 4</h2>
                                 <div class="paintName">
-                                    <h3>Wave</h3>
+                                    <h3>Fish</h3>
+                                    <h2>(1987)</h2>
                                 </div>
-                                <a href="#"> View</a>
                             </div>
                         </div>
 
