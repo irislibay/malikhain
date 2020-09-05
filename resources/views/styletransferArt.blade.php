@@ -30,9 +30,36 @@
 
             <div class="row text-dark text-center">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
-                    <div class="card shadow">
-                        <div class="card-body">
+                    <div class="card shadow bg-transparent border border-white text-white mb-5">
+                        <div class="mt-4 text-center">
+                        <div class="col-12 row m-auto">
+                            <label class="col-3">
+                                Select Style: 
+                            </label>
+                            <select class="form-control form-control-sm col-5 offset-3">
 
+                                <option value="styles/style-pacitaabad.jpg">
+                                    Pacita Abad
+                                </option>
+
+                                <option value="styles/style-filipinofamily-baldemor.jpg">
+                                    Manuel Baldemor
+                                </option>
+
+                                <option value="styles/style-spolarium-juanluna.jpg">
+                                    Juan Luna
+                                </option>
+
+                                <option value="styles/style-amorsolo-1.jpg">
+                                    Fernando Amorsolo
+                                </option>
+
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow bg-transparent border border-white text-white">
+                        <div class="card-body bg-info">
                             <!-- print success message after file upload  -->
                             @if(Session::has('success'))
                                 <div class="alert alert-success">
@@ -42,7 +69,6 @@
                                     @endphp
                                 </div>
                             @endif
-
                             <div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
                                 <label class="my-3" for="filename">
                                     Upload your artwork (.jpeg, .jpg, .png)
@@ -50,35 +76,12 @@
                                 <input type="file"
                                     name="filename"
                                     id="filename"
-                                    class="form-control my-3">
+                                    class="form-control-file border border-white">
                                 <span class="text-danger">
                                     {{ $errors->first('filename') }}
                                 </span>
                             </div>
-                            <div class="mt-5">
-                                <label>
-                                    Select Style
-                                </label>
-                                <select>
-
-                                    <option value="styles/style-pacitaabad.jpg">
-                                        Pacita Abad
-                                    </option>
-
-                                    <option value="styles/style-filipinofamily-baldemor.jpg">
-                                        Manuel Baldemor
-                                    </option>
-
-                                    <option value="styles/style-spolarium-juanluna.jpg">
-                                        Juan Luna
-                                    </option>
-
-                                    <option value="styles/style-amorsolo-1.jpg">
-                                        Fernando Amorsolo
-                                    </option>
-
-                                </select>
-                            </div>
+                            
                         </div>
 
                         <div class="card-footer bg-transparent">
