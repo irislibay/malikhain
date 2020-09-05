@@ -10,7 +10,20 @@
                             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Pacita_Abad.jpg/220px-Pacita_Abad.jpg"/>
                         </div>
                         <div class="back">
-                            Achievements Here!
+                            <p class="text-justify"><span style="font-weight:900">-"Parangal for Pacita Abad"</span> - in memory of the late international artist, National Museum of the Philippines, January 2005</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Art in Embassies - Indonesia"</span>, United States Department of State, September 2001</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Pamana Ng Pilipino Award"</span> for outstanding achievement in the arts, given by the President of the Philippines, Manila, June 2000</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Plaque of Recognition to Pacita B. Abad, Ivatan Painter, Internationally Acclaimed Artist"</span>, from the Province of Batanes, 2000</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Filipina Firsts"</span>, a compendium of 100 Filipino women who have broken ground in their fields of endeavor organized by the Philippine American Foundation in Manila and Washington, D.C., June 1998</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Likha Award"</span>, marking the Centennial of Philippine Independence, given in recognition of outstanding achievement, June 1998</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Art in Embassies - Philippines"</span>, United States Department of State, February 1996</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Excellence 2000 Awards for the Arts"</span>, given by U.S. Pan Asian American Chamber of Commerce in Washington, D.C. (Website www.uspaacc.com), May 1995 New York State Council on the Arts Grant for Visiting Artists Program at Amuan, 1993</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Gwendolyn Caffritz Award"</span>, given by the Washington, D.C. Commission for the Arts, June 1992</p>
+                            <p class="text-justify"><span style="font-weight:900">-"Mid-Atlantic Arts Regional Fellowship"</span>, US, June 1992 "D.C. Commission on the Arts Award", June 1990</p>
+                            <p class="text-justify"><span style="font-weight:900">-"MetroArt II Award: Six Masks from Six Continents"</span>, five-painting mural installed at Metro Center, Washington, D.C., June 1990</p>
+                            <p class="text-justify"><span style="font-weight:900">-"National Endowment for the Arts"</span>, Visual Arts Fellowship, 1989 to 1990, June 1989</p>
+                            <p class="text-justify"><span style="font-weight:900">-"D.C. Commission on the Arts Award"</span>, June 1989</p>
+                            <p class="text-justify"><span style="font-weight:900">-"TOYM Award"</span> for the Most Outstanding Young Artist in the Philippines, July 1984</p>
                         </div>
                     </div>
                 </div>
@@ -52,7 +65,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
+                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 4</h2>
                                 <div class="paintName">

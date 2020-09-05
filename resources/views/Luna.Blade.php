@@ -10,7 +10,10 @@
                             <img src="https://images.summitmedia-digital.com/esquiremagph/images/2017/01/20/juan.png"/>
                         </div>
                         <div class="back">
-                            Achievements Here!
+                            <p class="text-justify"><span style="font-weight:900">-"The Luna Award"</span> An award named after him which is given annually by the Film Academy of the Philippines to recognize the outstanding achievements of the Filipino film industry.</p>
+                            <p class="text-justify"><span style="font-weight:900">-His Painting "Blood Compact" now resides permanently in the Malacañang Palace.</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-6th most expensive painting ever sold in the philippines. (P46 720 000)</span>“¿A Do...Va la Nave?” (1885)</p>
+                            <p class="text-justify"><span style="font-weight:900">-2nd prize winner in the National Exposition of Fine Arts in Madrid (1881)</span> with "La Muerte de Cleopatra" (1881)</p>
                         </div>
                     </div>
                 </div>
@@ -30,7 +33,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
+                            <img class="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/The_Battle_of_Lepanto_of_1571_full_version_by_Juan_Luna.jpg/1280px-The_Battle_of_Lepanto_of_1571_full_version_by_Juan_Luna.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 2</h2>
                                 <div class="paintName">
@@ -41,7 +44,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
+                            <img class="" src="https://qph.fs.quoracdn.net/main-qimg-47cb506683f002e823747e0da5f81113"/>
                             <div class="contentbx">
                                 <h2>Paint 3</h2>
                                 <div class="paintName">
@@ -52,7 +55,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
+                            <img class="" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Death_of_Cleopatra_by_Juan_Luna1881.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 4</h2>
                                 <div class="paintName">

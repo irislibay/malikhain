@@ -19,7 +19,7 @@
                 <div class="row row-nest">
                     <div class="col-12 box2">
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/fd/fda855b1-39fa-4216-8696-2464b7ad3a1d_750_557.jpg"/>
+                            <img class="" src="https://images-na.ssl-images-amazon.com/images/I/413QNJdHR2L._SX336_BO1,204,203,200_.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 1</h2>
                                 <div class="paintName">
@@ -30,7 +30,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
+                            <img class="" src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Noli2ndedition.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 2</h2>
                                 <div class="paintName">
@@ -41,20 +41,9 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
+                            <img class="" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/First_page_of_El_filibusterismo_manuscript.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 3</h2>
-                                <div class="paintName">
-                                    <h3>Wave</h3>
-                                </div>
-                                <a href="#"> View</a>
-                            </div>
-                        </div>
-
-                        <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
-                            <div class="contentbx">
-                                <h2>Paint 4</h2>
                                 <div class="paintName">
                                     <h3>Wave</h3>
                                 </div>

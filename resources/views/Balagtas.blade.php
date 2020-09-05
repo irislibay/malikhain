@@ -10,7 +10,10 @@
                             <img src="https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg"/>
                         </div>
                         <div class="back">
-                            Achievements Here!
+                            <p class="text-justify"><span style="font-weight:900">-An elementary school was erected in honor of Balagtas, The Francisco Balagtas Elementary School (FBES), located in Santa Cruz, Manila.</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-There is a plaza and park (Plaza Balagtas) erectede in Pandacan, Manila and most of the streets were named after various Florante at Laura characters.</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-His birthplace, Bigaa, Bulacan, was renamed to Balagtas, Bulacan that now has a museum, historical marker, monument, and elementary school in his memory.</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-The Former Folks Arts Theater in Manila is now called Tanghalang Francisco Balagtas.</span></p>
                         </div>
                     </div>
                 </div>
@@ -19,44 +22,11 @@
                 <div class="row row-nest">
                     <div class="col-12 box2">
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/fd/fda855b1-39fa-4216-8696-2464b7ad3a1d_750_557.jpg"/>
+                            <img class="" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1537423914l/41859549._SY475_.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 1</h2>
                                 <div class="paintName">
                                     <h3>A Starry Night</h3>
-                                </div>
-                                <a href="#"> View</a>
-                            </div>
-                        </div>
-
-                        <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
-                            <div class="contentbx">
-                                <h2>Paint 2</h2>
-                                <div class="paintName">
-                                    <h3>Wave</h3>
-                                </div>
-                                <a href="#"> View</a>
-                            </div>
-                        </div>
-
-                        <div class="card" style="">
-                            <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
-                            <div class="contentbx">
-                                <h2>Paint 3</h2>
-                                <div class="paintName">
-                                    <h3>Wave</h3>
-                                </div>
-                                <a href="#"> View</a>
-                            </div>
-                        </div>
-
-                        <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
-                            <div class="contentbx">
-                                <h2>Paint 4</h2>
-                                <div class="paintName">
-                                    <h3>Wave</h3>
                                 </div>
                                 <a href="#"> View</a>
                             </div>
@@ -97,6 +67,13 @@
                                 <p class="text-justify">
                                     He sold his land and all of his riches, in order for him to be imprisoned in 1861, and continued writing poetry, along with translating Spanish documents, but he died a year later—on February 20, 1862, at the age of 73. Upon his deathbed, he asked the favor that none of his children become poets like him, who had suffered under his gift as well as under others. He even went as far as to tell them it would be better to cut their hands off than let them be writers.
                                 </p>
+                                <p class="text-justify">
+                                    Majority of the source material for Balagtas' work come from Hermenigildo Cruz' book which itself is based on the surviving testimonies and memories of Balagtas' children at the turn of the century. In his book, he reconstructs some of the plays.
+                                </p>
+                                <p class="text-justify">-"Rodolfo at Rosemonda"</p>
+                                <p class="text-justify">-"Nudo gordeano"</p>
+                                <p class="text-justify">-"Abdol at Misereanan"–a komedya, staged in Abucay, Bataan in 1857</p>
+                                <p class="text-justify">-"Bayaceto at Dorslica" – a komedya in three parts, staged at Udyong on September 27, 1857</p>
                             </div>
                         </div>
                     </div>

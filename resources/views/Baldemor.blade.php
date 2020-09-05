@@ -10,7 +10,26 @@
                             <img src="https://www.artcircle-gallery.com/wp-content/uploads/2017/03/13256243_1718585861758185_1750782011660232265_n.jpg"/>
                         </div>
                         <div class="back">
-                            Achievements Here!
+                            <p class="text-justify"><span style="font-weight:900">-Most Outstanding Alumni of University of Santo Thomas (2007)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-10th Asian Biennale Bangladesh (2004)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Thirteen Artists Award, Cultural Center of the Philippines (1992)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-First ASEAN Symposium on Aesthetics, Workshop and Exhibition, National Gallery, Kuala Lumpur, Malaysia (1989)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Best Fine Print Award, Art Association of the Philippines (1983)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Best Sculpture Award, Art Association of the Philippines (1982)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Honorable Mention Award for Painting, AAP (1974)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Philippine Representative, XIV Internationale Art Exhibition, Paris, France Grand Prize Award, Art Association of the Philippines (1973)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-China Exhibition Agency, The People's Republic of China (1987)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Ministry of Arts and Culture for selected countries:</span></p>
+                            <p class="text-justify" style="text-indent: 30px">Prague, Czech Republic (1997)</p>
+                            <p class="text-justify" style="text-indent: 30px">Cairo, Egypt (1991)</p>
+                            <p class="text-justify" style="text-indent: 30px">Moscow, USSR (1985)</p>
+                            <p class="text-justify" style="text-indent: 30px">Leutuvos TSR Kuturas Ministerija, Vilnius, Lithuania (1985)</p>
+                            <p class="text-justify" style="text-indent: 30px">British Council, London (1975)</p>
+                            <p class="text-justify" style="text-indent: 30px">Paris, France (1975)</p>
+                            <p class="text-justify"><span style="font-weight:900">-Artist-in-Residence for selected countries:</span></p>
+                            <p class="text-justify" style="text-indent: 30px">Santiago, Chile</p>
+                            <p class="text-justify" style="text-indent: 30px">Miskenot Shaannmin, Jerusalem, Israel USIS</p>
+                            <p class="text-justify" style="text-indent: 30px">Voluntary Visitors Program, USA</p>
                         </div>
                     </div>
                 </div>
@@ -19,7 +38,7 @@
                 <div class="row row-nest">
                     <div class="col-12 box2">
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/fd/fda855b1-39fa-4216-8696-2464b7ad3a1d_750_557.jpg"/>
+                            <img class="" src="https://media.mutualart.com/Images/2019_07/02/02/021543070/8b964853-be28-464c-ab83-50001196232b_570.Jpeg"/>
                             <div class="contentbx">
                                 <h2>Paint 1</h2>
                                 <div class="paintName">
@@ -30,7 +49,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
+                            <img class="" src="https://galeriey.com/wp-content/uploads/2014/10/Manuel-Baldemor-La-Tenuana-Family-24-x-24-in-Acrylic-1.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 2</h2>
                                 <div class="paintName">
@@ -41,7 +60,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
+                            <img class="" src="https://www.artcircle-gallery.com/wp-content/uploads/2016/12/filipino-fam-1.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 3</h2>
                                 <div class="paintName">
@@ -52,7 +71,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
+                            <img class="" src="https://i.pinimg.com/originals/56/b9/61/56b9612cf1103817d338aa8d78e388ef.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 4</h2>
                                 <div class="paintName">

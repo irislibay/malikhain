@@ -10,7 +10,15 @@
                             <img src="https://3.bp.blogspot.com/-bKf33Aw6UH4/TwumHHTFU-I/AAAAAAAAEHg/-AZVlFsnFVY/s640/Ang+Kiukok+2.jpg"/>
                         </div>
                         <div class="back">
-                            Achievements Here!
+                            <p class="text-justify"><span style="font-weight:900">-3rd prize Shell National Students Art Competition</span> in 1953 for "Calesa."</p>
+                            <p class="text-justify"><span style="font-weight:900">-The order of National Artists of the Philippines (National Artist)</span></p>
+                            <p class="text-justify"><span style="font-weight:900">-Art Association of the Philippines recognition</span></p>
+                            <p class="text-justify" style="text-indent: 30px">Still Life (1951, Honorable mention)</p>
+                            <p class="text-justify" style="text-indent: 30px">The Bird (1959, First Prize)</p>
+                            <p class="text-justify" style="text-indent: 30px">Still Life in Red (1963, Third Prize)</p>
+                            <p class="text-justify" style="text-indent: 30px">Fish (1963, Second Prize)</p>
+                            <p class="text-justify" style="text-indent: 30px">Geometric Still-Life Fish (1963, Second Prize)</p>
+                            <p class="text-justify"><span style="font-weight:900">-The 2nd most expensive Philippine artwork ever sold in the country. (P65,408,000)</span> “Fishermen” (1981)</p>
                         </div>
                     </div>
                 </div>
@@ -19,7 +27,7 @@
                 <div class="row row-nest">
                     <div class="col-12 box2">
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/fd/fda855b1-39fa-4216-8696-2464b7ad3a1d_750_557.jpg"/>
+                            <img class="" src="https://images.summitmedia-digital.com/spotph/images/articles/ang_kiukok_man_on_fire.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 1</h2>
                                 <div class="paintName">
@@ -30,7 +38,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://i.ocula.com/anzax/b0/b00f5387-c820-4a20-9c3a-f68432e9db9e_650_588.jpg"/>
+                            <img class="" src="https://images.summitmedia-digital.com/spotph/images/articles/ang_kiukok_thinking_man.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 2</h2>
                                 <div class="paintName">
@@ -41,7 +49,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://www.artstor.org/wp-content/uploads/2018/12/pacita_abad_l01_260378_8b_srgb.jpg"/>
+                            <img class="" src="https://media.mutualart.com/Images/2018_12/14/14/140954726/a931440f-d860-4e59-a429-2d395726ab02_570.Jpeg"/>
                             <div class="contentbx">
                                 <h2>Paint 3</h2>
                                 <div class="paintName">
@@ -52,7 +60,7 @@
                         </div>
 
                         <div class="card" style="">
-                            <img class="" src="https://d32dm0rphc51dk.cloudfront.net/QZfHjRlBWhuRqpLkF_68Gw/large.jpg" class="lebady"/>
+                            <img class="" src="http://gallerybig.com/gallerybigimages/whatsnewkiukok.jpg"/>
                             <div class="contentbx">
                                 <h2>Paint 4</h2>
                                 <div class="paintName">
