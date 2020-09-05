@@ -84,7 +84,12 @@
                             @endif
 
                             <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
-                                <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15"></textarea>
+                                <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15">@if(Session::has('inputPoem'))
+                                {!! Session::get('inputPoem') !!}
+                                @php
+                                    Session::forget('inputPoem');
+                                @endphp
+                            @endif</textarea>
                                 <span class="text-danger">
                                     {{ $errors->first('poem') }}
                                 </span>
