@@ -41,8 +41,6 @@ class PoemController extends Controller
      */
     public function store(Request $request)
     {
-        
-
         if($request->has('submitFile')){
             $validator = Validator::make($request->all(), [
                 'poemTextFile' => 'required'
