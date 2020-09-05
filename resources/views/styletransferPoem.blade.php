@@ -113,7 +113,7 @@
                     <div class="card-body text-white">
                         <div class="col-12 bg-light border border-white text-dark text-left overflow-auto"
                             style="height: 50em;">
-                            <div id="output">this is sample output<br>newline goes here<br>@if(Session::has('output'))
+                            <div id="output">@if(Session::has('output'))
                                 {!! Session::get('output') !!}
                                 @php
                                     Session::forget('output');
