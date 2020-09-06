@@ -85,27 +85,4 @@
     {{-- Particles JS --}}
     <script src="{{ asset('js/particles.js') }}"></script>
 
-    <script>
-        const minuteInSeconds = 60;
-        setInterval(function () {
-            axios.get('/api/files')
-                .then(res => {
-                    const files = res.data;
-                    let html = '';
-
-                    for (const file of files) {
-                        console.log(file);
-                        html += '<div class="form-group">' +
-                            '<label for="filename">'+ `${file.filename}` + '</label>' +
-                            '<div class="progress">' +
-                            '<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>' +
-                            '</div>' +
-                            '</div>';
-                    }
-
-                    $('#processing-files').html(html);
-                })
-        }, 1000 * minuteInSeconds * 2)
-    </script>
-
 @endsection

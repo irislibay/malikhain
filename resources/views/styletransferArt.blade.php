@@ -33,7 +33,6 @@
                     <div class="card shadow">
                         <div class="card-body">
 
-                            <!-- print success message after file upload  -->
                             @if(Session::has('success'))
                                 <div class="alert alert-success">
                                     {{ Session::get('success') }}
@@ -43,37 +42,50 @@
                                 </div>
                             @endif
 
+                            @if(Session::has('error'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('error') }}
+                                    @php
+                                        Session::forget('error');
+                                    @endphp
+                                </div>
+                            @endif
+
                             <div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
                                 <label class="my-3" for="filename">
                                     Upload your artwork (.jpeg, .jpg, .png)
                                 </label>
-                                <input type="file"
+                                <input
+                                    type="file"
                                     name="filename"
                                     id="filename"
-                                    class="form-control my-3">
+                                    class="form-control my-3"
+                                    accept="image/*"
+                                >
                                 <span class="text-danger">
                                     {{ $errors->first('filename') }}
                                 </span>
                             </div>
                             <div class="mt-5">
-                                <label>
+                                <label for="style_image">
                                     Select Style
                                 </label>
-                                <select>
 
-                                    <option value="styles/style-pacitaabad.jpg">
+                                <select id="style_image" name="style_image" required>
+
+                                    <option value="style-pacitaabad.jpg">
                                         Pacita Abad
                                     </option>
 
-                                    <option value="styles/style-filipinofamily-baldemor.jpg">
+                                    <option value="style-filipinofamily-baldemor.jpg">
                                         Manuel Baldemor
                                     </option>
 
-                                    <option value="styles/style-spolarium-juanluna.jpg">
+                                    <option value="style-spolarium-juanluna.jpg">
                                         Juan Luna
                                     </option>
 
-                                    <option value="styles/style-amorsolo-1.jpg">
+                                    <option value="style-amorsolo-1.jpg">
                                         Fernando Amorsolo
                                     </option>
 
@@ -83,8 +95,7 @@
 
                         <div class="card-footer bg-transparent">
                             <div class="form-group mt-3">
-                                <button type="submit"
-                                    class="btn btn-success btn-md">
+                                <button type="submit" class="btn btn-success btn-md">
                                     Fuse my artwork!
                                 </button>
                             </div>

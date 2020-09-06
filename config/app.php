@@ -231,4 +231,11 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Custom Application Environment Variables
+    |--------------------------------------------------------------------------
+    */
+
+    'malikhain_flask_api_base_url' => env('MALIKHAIN_FLASK_API_BASE_URL', 'http://localhost:5000'),
 ];

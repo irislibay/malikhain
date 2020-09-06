@@ -45,12 +45,21 @@
                             <div class="card-header bg-info text-white" color="#F3EEC3">
                                 <p class="text-left">Choose a text file:</p>
                                 @if(Session::has('successFile'))
-                                <div class="alert alert-success">
-                                    {!! Session::get('successFile') !!}
-                                    @php
-                                        Session::forget('successFile');
-                                    @endphp
-                                </div>
+                                    <div class="alert alert-success">
+                                        {!! Session::get('successFile') !!}
+                                        @php
+                                            Session::forget('successFile');
+                                        @endphp
+                                    </div>
+                                @endif
+
+                                @if(Session::has('errorFile'))
+                                    <div class="alert alert-danger">
+                                        {!! Session::get('errorFile') !!}
+                                        @php
+                                            Session::forget('errorFile');
+                                        @endphp
+                                    </div>
                                 @endif
                                 <input type="file" class="form-control-file border border-white" name ="poemTextFile" id="poemTextFile" accept=".txt">
                                 <span class="text-danger">
@@ -83,13 +92,22 @@
                                 </div>
                             @endif
 
+                            @if(Session::has('error'))
+                                <div class="alert alert-danger">
+                                    {!! Session::get('error') !!}
+                                    @php
+                                        Session::forget('error');
+                                    @endphp
+                                </div>
+                            @endif
+
                             <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
                                 <textarea class="form-control"
                                     id="poem"
                                     name="poem"
                                     style="resize:none"
-                                    rows="15">
-                                </textarea>
+                                    rows="15"
+                                ></textarea>
                                 <span class="text-danger">
                                     {{ $errors->first('poem') }}
                                 </span>
@@ -97,8 +115,11 @@
                         </div>
                         <div class="card-footer">
                             <div class="form-group text-center">
-                                <button type="submit" name="submitText" id="submitText"
-                                    class="btn btn-success btn-sm">
+                                <button
+                                    id="submitText"
+                                    name="submitText"
+                                    class="btn btn-success btn-sm"
+                                >
                                     Fuse Text
                                 </button>
                             </div>
@@ -113,12 +134,13 @@
                     <div class="card-body text-white">
                         <div class="col-12 bg-light border border-white text-dark text-left overflow-auto"
                             style="height: 50em;">
-                            <div id="output">@if(Session::has('output'))
-                                {!! Session::get('output') !!}
-                                @php
-                                    Session::forget('output');
-                                @endphp
-                            @endif
+                            <div id="output">
+                                @if(Session::has('output'))
+                                    {!! Session::get('output') !!}
+                                    @php
+                                        Session::forget('output');
+                                    @endphp
+                                @endif
                             </div>
                         </div>
                         <div class="row mt-3">
@@ -141,6 +163,7 @@
     <script src="{{ asset('js/particles.js') }}"></script>
 
     <script>
+
         //----- jQuery Javascript---- //
         // get the select box element and store it as '$selecBox'
         var $selectbox = $("#selectbox");

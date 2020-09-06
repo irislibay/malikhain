@@ -21,7 +21,7 @@
                 @foreach($images as $image)
                     <a class="card" href="#!">
                         <div class="front"
-                            style="background-image: url(/output_image/{{ $image }})">
+                            style="background-image: url({{ config('MALIKHAIN_FLASK_API_BASE_URL').'/nst/files/'.$image->filename }})">
                         </div>
                         <div class="back">
                             <div>
