@@ -3,6 +3,25 @@
 @section('styles')
     {{-- Separate CSS from app.css since not all pages are using particle.js --}}
     <link href="{{ mix('css/particles.css') }}" rel="stylesheet">
+    <style>
+        /* HIDE RADIO */
+        [type=radio] { 
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        }
+
+        /* IMAGE STYLES */
+        [type=radio] + img {
+        cursor: pointer;
+        }
+
+        /* CHECKED STYLES */
+        [type=radio]:checked + img {
+        outline: 2px solid #fff;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -34,28 +53,49 @@
                         <div class="mt-4 text-center">
                             <div class="col-12 row m-auto">
                                 <label class="col-3">
-                                    Select Style: 
+                                    Select Artist: 
                                 </label>
                                 <select id="artistSelect" class="form-control form-control-sm col-5 offset-3">
-                                    <option value="/styles/style-pacitaabad.jpg">
+                                    <option value="Pacita Abad">
                                         Pacita Abad
                                     </option>
-                                    <option value="/styles/style-filipinofamily-baldemor.jpg">
+                                    <option value="Manuel Baldemor">
                                         Manuel Baldemor
                                     </option>
-                                    <option value="/styles/style-spolarium-juanluna.jpg">
+                                    <option value="Juan Luna">
                                         Juan Luna
                                     </option>
-                                    <option value="/styles/style-amorsolo-1.jpg">
-                                        Fernando Amorsolo
+                                    <option value="Ang Kiukok">
+                                        Ang Kiukok
                                     </option>
                                 </select>
-                                <label class="col-12 my-0">
-                                    Style preview:
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow bg-transparent border border-white text-white mb-5">
+                        <div class="mt-4 text-center">
+                            <label class="col-12">
+                                    Select Style: 
+                            </label>
+                            <div class="row p-3">
+                                <label class="col-6">
+                                    <input type="radio" name="style_image" id="radio1" value="/styles/Pacita Abad/01.png" checked>
+                                    <img class="img-fluid" id="image1" src="/styles/Pacita Abad/01.png">
                                 </label>
-                                <div class="col-8 border border-white my-3 mx-auto p-0 align-items-center row" style="height: 24em;">
-                                    <img id="artPreview" class="col img-fluid m-auto" src="/styles/style-pacitaabad.jpg" />
-                                </div>
+                                <label class="col-6">
+                                    <input type="radio" name="style_image" id="radio2" value="/styles/Pacita Abad/02.png">
+                                    <img class="img-fluid" id="image2" src="/styles/Pacita Abad/02.png">
+                                </label>
+                            </div>
+                            <div class="row p-3">
+                                <label class="col-6">
+                                    <input type="radio" name="style_image" id="radio3" value="/styles/Pacita Abad/03.png">
+                                    <img class="img-fluid" id="image3" src="/styles/Pacita Abad/03.png">
+                                </label>
+                                <label class="col-6">
+                                    <input type="radio" name="style_image" id="radio4" value="/styles/Pacita Abad/04.png">
+                                    <img class="img-fluid" id="image4" src="/styles/Pacita Abad/04.png">
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -111,7 +151,16 @@
 
     <script>
         $('#artistSelect').change(function(){
-            $('#artPreview').attr('src', $('#artistSelect').val());
+            var folderName = $('#artistSelect option:selected').val();
+            $('#radio1').attr('value', '/styles/'+folderName+'/01.png');
+            $('#radio2').attr('value', '/styles/'+folderName+'/01.png');
+            $('#radio3').attr('value', '/styles/'+folderName+'/01.png');
+            $('#radio4').attr('value', '/styles/'+folderName+'/01.png');
+
+            $('#image1').attr('src', '/styles/'+folderName+'/01.png');
+            $('#image2').attr('src', '/styles/'+folderName+'/02.png');
+            $('#image3').attr('src', '/styles/'+folderName+'/03.png');
+            $('#image4').attr('src', '/styles/'+folderName+'/04.png');
         });
         // //----- jQuery Javascript---- //
         // // get the select box element and store it as '$selecBox'
