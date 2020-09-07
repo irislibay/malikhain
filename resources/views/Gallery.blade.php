@@ -2,10 +2,8 @@
 
 @section('content')
 
-    <div class="my-5">
-        <div class="text-white text-center mb-5"
-            data-aos="fade-up"
-            data-aos-duration="2000">
+    <div class="container text-white my-5">
+        <div class="text-white text-center mb-5" data-aos="fade-up" data-aos-duration="2000">
             <p class="display-4 drop-shadow font-weight-bold"
                 style="font-family: 'Megrim', cursive;">
                 Exhibit

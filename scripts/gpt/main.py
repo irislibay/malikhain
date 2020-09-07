@@ -41,7 +41,7 @@ def interact_model(
     seed=150,
     nsamples=1,
     batch_size=1,
-    length=140,
+    length=240,
     temperature=1,
     top_k=0,
     top_p=0.0,

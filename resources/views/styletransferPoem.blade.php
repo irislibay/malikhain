@@ -174,9 +174,9 @@
             var a = document.body.appendChild(
                document.createElement("a")
             );
-           const regex = /(< ?br ?>)/g;
+        //    const regex = /(< ?br ?>)/g;
            a.download = "newfile.txt";
-           const text = document.getElementById("output").innerHTML.replaceAll(regex, '%0D%0A');
+           const text = document.getElementById("output").innerHTML.replaceAll("<br>", "\n");
            a.href = "data:text/html," + text;
            a.click(); //Trigger a click on the element
         }
