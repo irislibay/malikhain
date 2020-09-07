@@ -73,6 +73,8 @@ class FileController extends Controller
 
                 $client = new HttpClient();
 
+                set_time_limit(0);
+
                 try {
                     $result = $client->post(config('app.malikhain_flask_api_base_url').'/nst/files', [
                         'multipart' => [
