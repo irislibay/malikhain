@@ -25,7 +25,7 @@
                 <div class="card col-12 mb-5 bg-transparent border border-white">
                     <div class="card-body text-white">
                         <div class="row">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg/330px-Self_portrait_of_F%C3%A9lix_Resurrecci%C3%B3n_Hidalgo.jpg"
+                            <img src="https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg"
                                 class="col-3 rounded float-left border border-white"
                                 style="object-fit: cover;">
                             <div class="col-9">
