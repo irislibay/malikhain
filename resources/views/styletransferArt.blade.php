@@ -20,6 +20,14 @@
         /* CHECKED STYLES */
         [type=radio]:checked + img {
         outline: 2px solid #fff;
+        -moz-outline-radius: 10px;
+        }
+
+        .img-fluid{
+        border-radius: 10px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
         }
     </style>
 @endsection
