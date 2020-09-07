@@ -65,7 +65,7 @@ class PoemController extends Controller
         }
 
 //        Log::info($text);
-
+        set_time_limit(0);
         $client = new HttpClient();
 
         try {
