@@ -31,7 +31,7 @@
 
                 <p class="h2 drop-shadow mt-5"
                     style="font-family: 'Megrim', cursive">
-                    Are you an artist?
+                    Use your sketches!
                 </p>
 
                 <p class="mb-5"
@@ -58,7 +58,7 @@
 
                 <p class="h2 drop-shadow mt-5"
                     style="font-family: 'Megrim', cursive">
-                    Are you a poet?
+                    Use your poems!
                 </p>
 
                 <p class="mb-5"
