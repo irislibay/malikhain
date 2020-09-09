@@ -3,6 +3,7 @@
 @section('styles')
     {{-- Separate CSS from app.css since not all pages are using particle.js --}}
     <link href="{{ mix('css/particles.css') }}" rel="stylesheet">
+    <link href="css/loadAnim.css" rel="stylesheet">
     <style>
         /* HIDE RADIO */
         [type=radio] { 
@@ -138,11 +139,20 @@
                             <div class="form-group mt-3">
                                 <button type="submit"
                                     class="btn btn-success btn-md">
-                                    Fuse my artwork!
+                                    <span class="btn-text">Fuse my artwork!</span>
                                 </button>
                             </div>
-                        </div>
 
+                            <div class="spinner hide">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                                <div id="output-iteration" class="carousel slide" data-ride="carousel">
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -156,6 +166,33 @@
 
     {{-- Particles JS --}}
     <script src="{{ asset('js/particles.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $(".btn").on("click", function() {
+                $(".spinner").removeClass("hide");
+                $(".btn").attr("disabled", true);
+                $(".btn-text").text("Generating image...");
+            })
+        })
+    </script>
+
+    <script>
+        var images = ['/../scripts/neural_style/output/1599662194-0.png', '/../scripts/neural_style/output/1599662194-20.png',  '/../scripts/neural_style/output/1599662194-40.png'];
+        buildcarousel("output-iteration", images)
+        function buildcarousel(id,images){
+            var html = $("#"+id).append('<ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#'+id+'" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#'+id+'" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>');
+            let indicators = html.find('.carousel-indicators');
+            let carousel = html.find('.carousel-inner')
+            images.forEach((e,i)=>{
+            var activeclass = i == 0 ? "active":"";
+            indicators.append('<li data-target="#output-iteration" data-slide-to="'+i+'" class="'+activeclass+'"></li>');
+            carousel.append('<div class="carousel-item '+activeclass+'"><img class="d-block w-100" src="'+e+'" alt="First slide"></div>');
+        })
+        console.log(html);
+}
+
+
+    </script>
 
     <script>
         $('#artistSelect').change(function(){
