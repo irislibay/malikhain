@@ -42,7 +42,11 @@ class FileController extends Controller
      */
     public function create()
     {
-        return view('styletransferArt', ['uploaded_filename' => '']);
+        $file = File::latest()->first();
+        $original_filename = explode('.', $file->filename)[0];
+        $filename = explode('-', $original_filename)[0];
+
+        return view('styletransferArt', ['uploaded_filename' => $filename]);
     }
 
     /**
