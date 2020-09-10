@@ -19,7 +19,7 @@
                 @foreach($images as $image)
                     <a class="card" href="#!">
                         <div class="front"
-                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }})">
+                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }}); object-fit: contain;">
                         </div>
                         <div class="back">
                             <div>
@@ -33,10 +33,13 @@
 
                 @foreach($poems as $poem)
                     <a class="card" href="#!">
-                        <div class="front overflow-auto">
-                            <pre class="text-dark mt-5">
+                        <div class="front" style="background: linear-gradient(135deg, #845EC2, #FFC75F);">
+                            <div class="text-white mt-5" >
+                                <p>
+                                    <br><br><br><br>
                                 {!! $poem  !!}
-                            </pre>
+                                </p>
+                            </div>
                         </div>
                         <div class="back">
                             <div>
