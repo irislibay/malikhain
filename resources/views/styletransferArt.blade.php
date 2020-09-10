@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                                <div id="output-iteration" class="carousel slide" data-ride="carousel">
+                                <div id="output-iteration" class="carousel slide" data-ride="carousel" style="border-radius: 10px; overflow: hidden;">
                                 </div>
                         </div>
                     </div>
@@ -177,7 +177,14 @@
     </script>
 
     <script>
-        var images = ['/output_image/1599662194-0.png', '/output_image/1599662194-200.png',  '/output_image/1599662194-500.png'];
+        var output = '/output_image/1599662194-';
+        var images = [];
+        var imgval = 0;
+
+        for(i = 0; i < 26; i++){
+            imgval = i * 20;
+            images[i] = output+imgval+'.png';
+        }
         buildcarousel("output-iteration", images)
         function buildcarousel(id,images){
             var html = $("#"+id).append('<ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#'+id+'" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#'+id+'" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>');
@@ -189,8 +196,7 @@
             carousel.append('<div class="carousel-item '+activeclass+'"><img class="d-block w-100" src="'+e+'" alt="First slide"></div>');
         })
         console.log(html);
-}
-
+        }
 
     </script>
 
