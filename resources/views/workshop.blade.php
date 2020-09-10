@@ -31,12 +31,12 @@
 
                 <p class="h2 drop-shadow mt-5"
                     style="font-family: 'Megrim', cursive">
-                    Use your sketches!
+                    Are you interested in art?
                 </p>
 
                 <p class="mb-5"
                     style="font-family: 'Major Mono Display', cursive;">
-                    Style-Content fusion with images
+                    Are you interested in poetry?
                 </p>
 
                 <p>
