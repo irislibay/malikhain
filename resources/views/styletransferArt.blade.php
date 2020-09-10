@@ -6,7 +6,7 @@
     <link href="css/loadAnim.css" rel="stylesheet">
     <style>
         /* HIDE RADIO */
-        [type=radio] { 
+        [type=radio] {
         position: absolute;
         opacity: 0;
         width: 0;
@@ -62,7 +62,7 @@
                         <div class="mt-4 text-center">
                             <div class="col-12 row m-auto">
                                 <label class="col-3">
-                                    Select Artist: 
+                                    Select Artist:
                                 </label>
                                 <select id="artistSelect" class="form-control form-control-sm col-5 offset-3">
                                     <option value="Pacita Abad">
@@ -84,7 +84,7 @@
                     <div class="card shadow bg-transparent border border-white text-white mb-5">
                         <div class="mt-4 text-center">
                             <label class="col-12">
-                                    Select Style: 
+                                    Select Style:
                             </label>
                             <div class="row p-3">
                                 <label class="col-6">
@@ -119,6 +119,15 @@
                                     @endphp
                                 </div>
                             @endif
+
+                            @if(Session::has('error'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('error') }}
+                                    @php
+                                        Session::forget('error');
+                                    @endphp
+                                </div>
+                            @endif
                             <div class="form-group" {{ $errors->has('filename') ? 'has-error' : '' }}>
                                 <label class="my-3" for="filename">
                                     Upload your artwork (.jpeg, .jpg, .png)
@@ -132,14 +141,13 @@
                                     {{ $errors->first('filename') }}
                                 </span>
                             </div>
-                            
+
                         </div>
 
                         <div class="card-footer bg-transparent">
                             <div class="form-group mt-3">
-                                <button type="submit"
-                                    class="btn btn-success btn-md">
-                                    <span class="btn-text">Fuse my artwork!</span>
+                                <button id="fuseBtn" type="submit" class="btn btn-success btn-md">
+                                    <span id="fuseBtnText" class="btn-text">Fuse my artwork!</span>
                                 </button>
                             </div>
 
@@ -164,43 +172,40 @@
 
 @section('scripts')
 
-    {{-- Particles JS --}}
-    <script src="{{ asset('js/particles.js') }}"></script>
     <script>
+        let file = "{{ $uploaded_filename }}";
+
+        if (file) {
+            function buildCarousel(id,images){
+                var html = $("#"+id).append('<ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#'+id+'" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#'+id+'" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>');
+                let indicators = html.find('.carousel-indicators');
+                let carousel = html.find('.carousel-inner')
+                images.forEach((image, i)=>{
+                    var activeclass = i === 0 ? "active":"";
+                    indicators.append('<li data-target="#output-iteration" data-slide-to="'+i+'" class="'+activeclass+'"></li>');
+                    carousel.append('<div class="carousel-item ' + activeclass + '"><img class="d-block w-100" src="' + image + '" alt="Slide"></div>');
+                })
+            }
+
+            const filename = file.split(".")[0];
+
+            const images = [];
+
+            for(let i = 0; i <= 500; i += 100){
+                images.push(`http://localhost:5000/nst/files/${filename}-${i}.png`);
+            }
+
+            buildCarousel("output-iteration", images)
+        }
+
         $(document).ready(function() {
-            $(".btn").on("click", function() {
+            $("#fuseBtn").on("click", function() {
                 $(".spinner").removeClass("hide");
-                $(".btn").attr("disabled", true);
-                $(".btn-text").text("Generating image...");
+                $("#fuseBtnText").text("Generating image...");
+                $("#fuseBtnText").attr("disabled", true);
             })
         })
-    </script>
 
-    <script>
-        var output = '/output_image/1599662194-';
-        var images = [];
-        var imgval = 0;
-
-        for(i = 0; i < 26; i++){
-            imgval = i * 20;
-            images[i] = output+imgval+'.png';
-        }
-        buildcarousel("output-iteration", images)
-        function buildcarousel(id,images){
-            var html = $("#"+id).append('<ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#'+id+'" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#'+id+'" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>');
-            let indicators = html.find('.carousel-indicators');
-            let carousel = html.find('.carousel-inner')
-            images.forEach((e,i)=>{
-            var activeclass = i == 0 ? "active":"";
-            indicators.append('<li data-target="#output-iteration" data-slide-to="'+i+'" class="'+activeclass+'"></li>');
-            carousel.append('<div class="carousel-item '+activeclass+'"><img class="d-block w-100" src="'+e+'" alt="First slide"></div>');
-        })
-        console.log(html);
-        }
-
-    </script>
-
-    <script>
         $('#artistSelect').change(function(){
             var folderName = $('#artistSelect option:selected').val();
             $('#radio1').attr('value', '/styles/'+folderName+'/01.png');
@@ -243,4 +248,6 @@
         // }
     </script>
 
+    {{-- Particles JS --}}
+    <script src="{{ asset('js/particles.js') }}"></script>
 @endsection

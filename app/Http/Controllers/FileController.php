@@ -42,9 +42,7 @@ class FileController extends Controller
      */
     public function create()
     {
-        $files = File::all();
-
-        return view('styletransferArt', ['files' => $files]);
+        return view('styletransferArt', ['uploaded_filename' => '']);
     }
 
     /**
@@ -62,12 +60,13 @@ class FileController extends Controller
         }
 
         if($file = $request->file('filename')) {
-            $name = time().time().'.'.$file->getClientOriginalExtension();
+            $now = time().time();
+            $name = $now.'.'.$file->getClientOriginalExtension();
 
             $target_path = public_path('uploads/');
 
             if($file->move($target_path, $name)) {
-                File::create(['filename' => $name]);
+                File::create(['filename' => $now.'-500.png']);
 
                 $style_image = $request->get('style_image');
 
@@ -94,7 +93,7 @@ class FileController extends Controller
                     return back()->with("error", "Unable to upload file");
                 }
 
-                return back()->with("success", "File uploaded successfully");
+                return back()->with("success", "File uploaded successfully")->with("uploaded_filename", $name);
             }
         }
 
