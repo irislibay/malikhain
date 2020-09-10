@@ -93,7 +93,7 @@ class FileController extends Controller
                     return back()->with("error", "Unable to upload file");
                 }
 
-                return back()->with("success", "File uploaded successfully")->with("uploaded_filename", $name);
+                return back()->with("success", "File uploaded successfully")->with("uploaded_filename", $now);
             }
         }
 

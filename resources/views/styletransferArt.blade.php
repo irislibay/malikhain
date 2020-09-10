@@ -173,9 +173,9 @@
 @section('scripts')
 
     <script>
-        let file = "{{ $uploaded_filename }}";
+        let filename = "{{ $uploaded_filename }}";
 
-        if (file) {
+        if (filename) {
             function buildCarousel(id,images){
                 var html = $("#"+id).append('<ol class="carousel-indicators"></ol><div class="carousel-inner"></div><a class="carousel-control-prev" href="#'+id+'" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#'+id+'" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>');
                 let indicators = html.find('.carousel-indicators');
@@ -187,12 +187,10 @@
                 })
             }
 
-            const filename = file.split(".")[0];
-
             const images = [];
 
             for(let i = 0; i <= 500; i += 100){
-                images.push(`http://localhost:5000/nst/files/${filename}-${i}.png`);
+                images.push(`{{ config('app.malikhain_flask_api_base_url').'/nst/files/' }}${filename}-${i}.png`);
             }
 
             buildCarousel("output-iteration", images)
