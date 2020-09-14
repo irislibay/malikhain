@@ -207,9 +207,9 @@
         $('#artistSelect').change(function(){
             var folderName = $('#artistSelect option:selected').val();
             $('#radio1').attr('value', '/styles/'+folderName+'/01.png');
-            $('#radio2').attr('value', '/styles/'+folderName+'/01.png');
-            $('#radio3').attr('value', '/styles/'+folderName+'/01.png');
-            $('#radio4').attr('value', '/styles/'+folderName+'/01.png');
+            $('#radio2').attr('value', '/styles/'+folderName+'/02.png');
+            $('#radio3').attr('value', '/styles/'+folderName+'/03.png');
+            $('#radio4').attr('value', '/styles/'+folderName+'/04.png');
 
             $('#image1').attr('src', '/styles/'+folderName+'/01.png');
             $('#image2').attr('src', '/styles/'+folderName+'/02.png');

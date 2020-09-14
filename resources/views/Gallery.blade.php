@@ -19,13 +19,11 @@
                 @foreach($images as $image)
                     <a class="card" href="#!">
                         <div class="front"
-                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }}); object-fit: contain;">
+                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }}); object-fit: cover;">
                         </div>
-                        <div class="back">
+                        <div class="back" style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/uploads/'.$image->filename  = explode('-', $image->filename)[0].'.png'}}); object-fit: cover;">
                             <div>
-                                <p>//image here//</p>
-                                <p>Who is //artist name here// </p>
-                                <button class="button">Know more</button>
+                                <button class="button" style="margin-top: 200px;">Know more</button>
                             </div>
                         </div>
                     </a>

@@ -95,6 +95,9 @@
     padding: 0 2em;
     color: #fff;
     font-family: 'Questrial', monospace;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
 }
 
 #card .back .button {

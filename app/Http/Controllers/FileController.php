@@ -65,14 +65,18 @@ class FileController extends Controller
 
         if($file = $request->file('filename')) {
             $now = time().time();
-            $name = $now.'.'.$file->getClientOriginalExtension();
+            $name = $now.'.png';
 
             $target_path = public_path('uploads/');
 
             if($file->move($target_path, $name)) {
-                File::create(['filename' => $now.'-500.png']);
-
+                dd($style_image);
                 $style_image = $request->get('style_image');
+
+                File::create([
+                    'filename' => $now.'-500.png',
+                    'styleimg' => $style_image
+                ]);
 
                 $client = new HttpClient();
 
