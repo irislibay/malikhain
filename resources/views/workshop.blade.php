@@ -36,7 +36,7 @@
 
                 <p class="mb-5"
                     style="font-family: 'Major Mono Display', cursive;">
-                    Are you interested in poetry?
+                    Style-Content fusion with images
                 </p>
 
                 <p>
@@ -58,7 +58,7 @@
 
                 <p class="h2 drop-shadow mt-5"
                     style="font-family: 'Megrim', cursive">
-                    Use your poems!
+                    Are you interested in poetry?
                 </p>
 
                 <p class="mb-5"
