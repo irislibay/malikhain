@@ -17,7 +17,7 @@
         <div id="card" class="border-bottom pb-5">
             <div class="content">
                 @foreach($images as $image)
-                    <a class="card" href="#!">
+                    <a class="card james-transparent" href="{{ '/ArtistPage/'.str_replace(' ', '', explode('/', explode('/styles/', $image->styleimg)[1])[0]) }}">
                         <div class="front"
                             style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }}); object-fit: cover;">
                         </div>
@@ -30,7 +30,7 @@
                 @endforeach
 
                 @foreach($poems as $poem)
-                    <a class="card" href="#!">
+                    <a class="card james-transparent" href="#!">
                         <div class="front" style="background: linear-gradient(135deg, #845EC2, #FFC75F);">
                             <div class="text-white mt-5" >
                                 <p>

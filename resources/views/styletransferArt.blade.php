@@ -146,6 +146,11 @@
 
                         <div class="card-footer bg-transparent">
                             <div class="form-group mt-3">
+                                @if(isset($message))
+                                <div class="alert alert-warning" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @endif
                                 <button id="fuseBtn" type="submit" class="btn btn-success btn-md">
                                     <span id="fuseBtnText" class="btn-text">Fuse my artwork!</span>
                                 </button>
