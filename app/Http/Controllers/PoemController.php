@@ -30,7 +30,7 @@ class PoemController extends Controller
      */
     public function create()
     {
-        //
+            return view('styletransferPoem');
     }
 
     /**
@@ -42,7 +42,12 @@ class PoemController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->has('submitFile')){
+        $now = time();
+        $name = $now.'.txt';
+
+        $target_path = public_path('uploads/');
+
+        if($request->has('submitFile')) {
             $validator = Validator::make($request->all(), [
                 'poemTextFile' => 'required'
             ]);
@@ -51,7 +56,8 @@ class PoemController extends Controller
                 return back()->withErrors($validator->errors());
             }
 
-            $text = file_get_contents($request->file('poemTextFile'));
+            $textFile = $request->file('poemTextFile');
+            $textFile->move($target_path, $name);
         } else if($request->has('submitText')) {
             $validator = Validator::make($request->all(), [
                 'poem' => 'required'
@@ -62,33 +68,36 @@ class PoemController extends Controller
             }
 
             $text = $request->input('poem');
+            file_put_contents($target_path.$name, $text);
+        } else {
+            return back()->with("error", "Invalid submission");
         }
 
-//        Log::info($text);
-        set_time_limit(0);
+        Poem::create([
+            'filename' => $name,
+            'model' => $model
+        ]);
+
         $client = new HttpClient();
+        set_time_limit(0);
 
         try {
-            $result = $client->post(config('app.malikhain_flask_api_base_url').'/gpt/text', [
-                'json' => [
-                    'text' => $text
+            $result = $client->post(config('app.malikhain_flask_api_base_url') . '/gpt/files', [
+                'multipart' => [
+                    [
+                        'name' => 'file',
+                        'contents' => fopen($target_path.$name, 'r')
+                    ]
                 ]
             ]);
         } catch (Throwable $e) {
             Log::error($e);
 
-            return $request->has('submitFile')
-                ? back()->with("errorFile", "Unable to upload file")
-                : back()->with("error", "Unable to read text");
+            return back()->with("error", "Unable to upload file");
         }
 
         $body = json_decode($result->getBody());
         $output = $body->text;
-
-//        Log::info($output);
-
-        $current_timestamp = Carbon::now()->timestamp;
-        FacadeFile::put('output_poem/'.$current_timestamp.'.txt', $output);
 
         return $request->has('submitFile')
             ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output)

@@ -64,26 +64,25 @@ class FileController extends Controller
         }
 
         if($file = $request->file('filename')) {
-            $now = time().time();
+            $now = time();
             $name = $now.'.png';
 
             $target_path = public_path('uploads/');
 
             if($file->move($target_path, $name)) {
-                // dd($request);
                 $style_image = $request->style_image;
 
-                // File::create([
-                //     'filename' => $now.'-500.png',
-                //     'styleimg' => $style_image
-                // ]);
-                $filemodel = new File();
-                $filemodel->filename = $now.'-500.png';
-                $filemodel->styleimg = $request->style_image;
+                File::create([
+                    'filename' => $now.'-500.png',
+                    'styleimg' => $style_image
+                ]);
+                // $filemodel = new File();
+                // $filemodel->filename = $now.'-500.png';
+                // $filemodel->styleimg = $request->style_image;
 
-                if(!$filemodel->save()){
-                    return back()->with('message', 'error saving file');
-                }
+                // if(!$filemodel->save()){
+                //     return back()->with('message', 'error saving file');
+                // }
 
                 $client = new HttpClient();
 

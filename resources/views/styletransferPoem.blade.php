@@ -30,9 +30,9 @@
                                 style="object-fit: cover;">
                             <div class="col-9">
                                 <br>
-                                <select class="form-control form-control-sm">
-                                    <option>Francisco Balagtas</option>
-                            </select>
+                                <select class="form-control form-control-sm" name="model">
+                                    <option value="100_fal">Francisco Balagtas</option>
+                                </select>
                             </div>
                         </div>
                     </div>

@@ -26,13 +26,8 @@ Route::get('workshop', function () {
 
 Route::get('workshop/styletransferArt', 'FileController@create');
 
-Route::get('workshop/styletransferPoem', function () {
-    return view('styletransferPoem');
-});
+Route::get('workshop/styletransferPoem', 'PoemController@create');
 
-// Route::get('/Gallery', function () {
-//     return view('Gallery');
-// });
 Route::get('Gallery', 'FileController@index')->name('index');
 
 Route::get('ArtistPage', function () {
