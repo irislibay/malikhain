@@ -44,12 +44,12 @@ class PoemController extends Controller
     {
         $now = time();
         $name = $now.'.txt';
-
         $target_path = public_path('uploads/');
 
         if($request->has('submitFile')) {
             $validator = Validator::make($request->all(), [
-                'poemTextFile' => 'required'
+                'poemTextFile' => 'required',
+                'model' => 'required'
             ]);
 
             if($validator->fails()) {
@@ -60,7 +60,8 @@ class PoemController extends Controller
             $textFile->move($target_path, $name);
         } else if($request->has('submitText')) {
             $validator = Validator::make($request->all(), [
-                'poem' => 'required'
+                'poem' => 'required',
+                'model' => 'required'
             ]);
 
             if($validator->fails()) {
@@ -72,11 +73,8 @@ class PoemController extends Controller
         } else {
             return back()->with("error", "Invalid submission");
         }
-
-        Poem::create([
-            'filename' => $name,
-            'model' => $model
-        ]);
+        $model = $request->model;
+        
 
         $client = new HttpClient();
         set_time_limit(0);
@@ -95,6 +93,11 @@ class PoemController extends Controller
 
             return back()->with("error", "Unable to upload file");
         }
+
+        Poem::create([
+            'filename' => $name,
+            'model' => $model
+        ]);
 
         $body = json_decode($result->getBody());
         $output = $body->text;
