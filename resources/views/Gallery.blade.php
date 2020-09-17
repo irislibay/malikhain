@@ -19,9 +19,9 @@
                 @foreach($images as $image)
                     <a class="card james-transparent" href="{{ '/ArtistPage/'.str_replace(' ', '', explode('/', explode('/styles/', $image->styleimg)[1])[0]) }}">
                         <div class="front"
-                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename }}); object-fit: cover;">
+                            style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/uploads/'.$image->filename = explode('-', $image->filename)[0].'.png' }}); object-fit: cover;">
                         </div>
-                        <div class="back" style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/uploads/'.$image->filename  = explode('-', $image->filename)[0].'.png'}}); object-fit: cover;">
+                        <div class="back" style="background-image: url({{ config('app.malikhain_flask_api_base_url').'/nst/files/'.$image->filename = explode('.', $image->filename)[0].'-500.png'  }}); object-fit: cover;">
                             <div>
                                 <button class="button" style="margin-top: 200px;">Know more</button>
                             </div>
@@ -33,24 +33,73 @@
                     <a class="card james-transparent" href="#!">
                         <div class="front" style="background: linear-gradient(135deg, #845EC2, #FFC75F);">
                             <div class="text-white mt-5" >
-                                <p>
-                                    <br><br><br><br>
-                                {!! $poem  !!}
+                                <p style="margin-top: 10px; text-align: center;">
+                                    {!! file_get_contents('uploads/'.$poem->filename) !!}
                                 </p>
                             </div>
                         </div>
-                        <div class="back">
-                            <div>
-                                <p>//book image here//</p>
-                                <p>Who is //artist name here// </p>
-                                <button class="button">Know more</button>
+                        <div class="back" style="overflow: hidden;">
+                            <div class="text-white mt-5" style="position: absolute; z-index: -1;" id="modal-base">
+                                <p style="margin-top: 10px;">
+                                    {!! $poem->text  !!}
+                                </p>  
                             </div>
+                            <button class="button" data-modal-target="{{ '#modal'.$loop->index }}" style="margin-top: 200px; margin-left: 10px; margin-right: 10px;">Know more</button>
                         </div>
                     </a>
-
+                    <div id="{{ 'modal'.$loop->index }}" class="modal">
+                        <div class="modal-header">
+                            <div class="title-modal">Generated Output</div>
+                            <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            {!! $poem->text  !!}
+                        </div>
+                    </div>
+                    <div id="overlay"></div>
                 @endforeach
             </div>
         </div>
     </div>
+@endsection
 
+@section('scripts')
+    <script defer>
+        const openModalButtons = document.querySelectorAll('[data-modal-target]')
+        const closeModalButtons = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+
+        openModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = document.querySelector(button.dataset.modalTarget)
+            openModal(modal)
+        })
+        })
+
+        overlay.addEventListener('click', () => {
+        const modals = document.querySelectorAll('.modal.active')
+        modals.forEach(modal => {
+            closeModal(modal)
+        })
+        })
+
+        closeModalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal')
+            closeModal(modal)
+        })
+        })
+
+        function openModal(modal) {
+        if (modal == null) return
+        modal.classList.add('active')
+        overlay.classList.add('active')
+        }
+
+        function closeModal(modal) {
+        if (modal == null) return
+        modal.classList.remove('active')
+        overlay.classList.remove('active')
+        }
+    </script>
 @endsection

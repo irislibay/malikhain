@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Poem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
@@ -58,6 +59,8 @@ class PoemController extends Controller
 
             $textFile = $request->file('poemTextFile');
             $textFile->move($target_path, $name);
+            $text = file_get_contents($target_path.$name);
+
         } else if($request->has('submitText')) {
             $validator = Validator::make($request->all(), [
                 'poem' => 'required',
@@ -85,6 +88,10 @@ class PoemController extends Controller
                     [
                         'name' => 'file',
                         'contents' => fopen($target_path.$name, 'r')
+                    ],
+                    [
+                        'name' => 'model',
+                        'contents' => $model
                     ]
                 ]
             ]);
@@ -94,17 +101,18 @@ class PoemController extends Controller
             return back()->with("error", "Unable to upload file");
         }
 
-        Poem::create([
-            'filename' => $name,
-            'model' => $model
-        ]);
-
         $body = json_decode($result->getBody());
         $output = $body->text;
 
+        Poem::create([
+            'filename' => $name,
+            'model' => $model,
+            'text' => $output
+        ]);
+
         return $request->has('submitFile')
-            ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output)
-            : back()->with("success", "Poem uploaded successfully")->with("output", $output);
+            ? back()->with("successFile", "Poem uploaded successfully")->with("output", $output)->with("inputPoem",$text)
+            : back()->with("success", "Poem uploaded successfully")->with("output", $output)->with("inputPoem",$text);
     }
 
     /**

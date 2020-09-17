@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\File;
+use App\Poem;
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -20,15 +21,17 @@ class FileController extends Controller
      */
     public function index()
     {
-        $poems_path = public_path('output_poem');
-        $poem_files = FacadeFile::files($poems_path);
-        $poems = array();
+        // $poems_path = public_path('output_poem');
+        // $poem_files = FacadeFile::files($poems_path);
+        // $poems = array();
 
-        foreach($poem_files as $poem) {
-            $poem = pathinfo($poem);
-            $content = FacadeFile::get('output_poem/'.$poem['basename']);
-            array_push($poems, $content);
-        }
+        // foreach($poem_files as $poem) {
+        //     $poem = pathinfo($poem);
+        //     $content = FacadeFile::get('output_poem/'.$poem['basename']);
+        //     array_push($poems, $content);
+        // }
+        
+        $poems = Poem::all();
 
         $images = File::all();
 

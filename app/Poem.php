@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class File extends Model
+class Poem extends Model
 {
-    protected $fillable = ['filename', 'model'];
+    protected $fillable = ['filename', 'model', 'text'];
 }

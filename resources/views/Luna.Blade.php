@@ -77,7 +77,7 @@
                         </div>
                         <div class="box4">
                             <div class="card-scroll">
-                                <h2>Life of Manuel Baldemor</h2>
+                                <h2>Life of Juan Luna</h2>
                                 <p class="text-justify">
                                     Born in the town of Badoc, Ilocos Norte in the northern Philippines, Juan N. Luna was the third among the seven children of Joaquín Luna de San Pedro y Posadas and Laureana Novicio y Ancheta. In 1861, the Luna family moved to Manila and he went to Ateneo Municipal de Manila where he obtained his Bachelor of Arts degree. He excelled in painting and drawing, and was influenced by his brother, Manuel N. Luna, who, according to Filipino patriot José Rizal, was a better painter than Juan himself.
                                 </p>

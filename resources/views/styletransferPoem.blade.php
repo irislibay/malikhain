@@ -22,90 +22,91 @@
 
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="card col-12 mb-5 bg-transparent border border-white">
-                    <div class="card-body text-white">
-                        <div class="row">
-                            <img src="https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg"
-                                class="col-3 rounded float-left border border-white"
-                                style="object-fit: cover;">
-                            <div class="col-9">
-                                <br>
-                                <select class="form-control form-control-sm" name="model">
-                                    <option value="100_fal">Francisco Balagtas</option>
-                                </select>
+                <form action="{{ route('poem.store') }}"
+                        method="post"
+                        enctype="multipart/form-data">
+                    <div class="card col-12 mb-5 bg-transparent border border-white">
+                        <div class="card-body text-white">
+                            <div class="row">
+                                <img src="https://www.bulakenyo.ph/wp-content/uploads/2020/04/baltazar-1.jpg"
+                                    class="col-3 rounded float-left border border-white"
+                                    style="object-fit: cover;">
+                                <div class="col-9">
+                                    <br>
+                                    <select class="form-control form-control-sm" name="model">
+                                        <option value="100_fal">Francisco Balagtas</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card shadow bg-transparent border border-white">
-                    <form action="{{ route('poem.store') }}"
-                        method="post"
-                        enctype="multipart/form-data">
-                        <div class="form-group" {{ $errors->has('poemFile') ? 'has-error' : '' }}>
-                            <div class="card-header bg-info text-white text-center" color="#F3EEC3">
-                                <p class="text-left">Choose a text file:</p>
-                                @if(Session::has('successFile'))
-                                <div class="alert alert-success">
-                                    {!! Session::get('successFile') !!}
-                                    @php
-                                        Session::forget('successFile');
-                                    @endphp
+                    <div class="card shadow bg-transparent border border-white">
+                        
+                            <div class="form-group" {{ $errors->has('poemFile') ? 'has-error' : '' }}>
+                                <div class="card-header bg-info text-white text-center" color="#F3EEC3">
+                                    <p class="text-left">Choose a text file:</p>
+                                    @if(Session::has('successFile'))
+                                    <div class="alert alert-success">
+                                        {!! Session::get('successFile') !!}
+                                        @php
+                                            Session::forget('successFile');
+                                        @endphp
+                                    </div>
+                                    @endif
+                                    <input type="file" class="form-control-file border border-white" name ="poemTextFile" id="poemTextFile" accept=".txt">
+                                    <span class="text-danger">
+                                        {{ $errors->first('poemFile') }}
+                                    </span>
+                                    <button type="submit" name="submitFile" id="submitFile"
+                                        class="btn btn-success btn-sm my-4">
+                                        Fuse File
+                                    </button>
                                 </div>
+                            </div>
+                            <div class="col-12 m-auto">
+                                <div class="row">
+                                    <div class="col-5"><hr class="bg-white"></div>
+                                    <div class="col-2 text-white">OR</div>
+                                    <div class="col-5"><hr class="bg-white"></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-left text-white">
+                                    Type in your poem here:
+                                </p>
+    
+                                @if(Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {!! Session::get('success') !!}
+                                        @php
+                                            Session::forget('success');
+                                        @endphp
+                                    </div>
                                 @endif
-                                <input type="file" class="form-control-file border border-white" name ="poemTextFile" id="poemTextFile" accept=".txt">
-                                <span class="text-danger">
-                                    {{ $errors->first('poemFile') }}
-                                </span>
-                                <button type="submit" name="submitFile" id="submitFile"
-                                    class="btn btn-success btn-sm my-4">
-                                    Fuse File
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-12 m-auto">
-                            <div class="row">
-                                <div class="col-5"><hr class="bg-white"></div>
-                                <div class="col-2 text-white">OR</div>
-                                <div class="col-5"><hr class="bg-white"></div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p class="text-left text-white">
-                                Type in your poem here:
-                            </p>
-
-                            @if(Session::has('success'))
-                                <div class="alert alert-success">
-                                    {!! Session::get('success') !!}
+    
+                                <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
+                                    <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15">@if(Session::has('inputPoem')){!! Session::get('inputPoem') !!}
                                     @php
-                                        Session::forget('success');
+                                        Session::forget('inputPoem');
                                     @endphp
+                                @endif</textarea>
+                                    <span class="text-danger">
+                                        {{ $errors->first('poem') }}
+                                    </span>
                                 </div>
-                            @endif
-
-                            <div class="form-group" {{ $errors->has('poem') ? 'has-error' : '' }}>
-                                <textarea class="form-control" id="poem" name="poem" style="resize:none" rows="15">@if(Session::has('inputPoem'))
-                                {!! Session::get('inputPoem') !!}
-                                @php
-                                    Session::forget('inputPoem');
-                                @endphp
-                            @endif</textarea>
-                                <span class="text-danger">
-                                    {{ $errors->first('poem') }}
-                                </span>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="form-group text-center">
-                                <button type="submit" name="submitText" id="submitText"
-                                    class="btn btn-success btn-sm">
-                                    Fuse Text
-                                </button>
+                            <div class="card-footer">
+                                <div class="form-group text-center">
+                                    <button type="submit" name="submitText" id="submitText"
+                                        class="btn btn-success btn-sm">
+                                        Fuse Text
+                                    </button>
+                                </div>
+                                {{ csrf_field() }}
                             </div>
-                            {{ csrf_field() }}
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>        
+                
             </div>
 
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
