@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="back" style="overflow: hidden;">
-                            <div class="text-white mt-5" style="position: absolute; z-index: -1;" id="modal-base">
+                            <div class="text-white mt-5" style="position: absolute; z-index: -1;">
                                 <p style="margin-top: 10px;">
                                     {!! $poem->text  !!}
                                 </p>  
@@ -56,7 +56,7 @@
                             {!! $poem->text  !!}
                         </div>
                     </div>
-                    <div id="overlay"></div>
+                    <div id="overlay" style="z-index: 3;"></div>
                 @endforeach
             </div>
         </div>
