@@ -59,7 +59,9 @@
                                     </span>
                                     <button type="submit" name="submitFile" id="submitFile"
                                         class="btn btn-success btn-sm my-4">
-                                        Fuse File
+                                        <span id="fuseBtnFile" class="btn-text">
+                                            Fuse File
+                                        </span>
                                     </button>
                                 </div>
                             </div>
@@ -99,7 +101,9 @@
                                 <div class="form-group text-center">
                                     <button type="submit" name="submitText" id="submitText"
                                         class="btn btn-success btn-sm">
-                                        Fuse Text
+                                        <span id="fuseBtnText" class="btn-text">
+                                            Fuse Text
+                                        </span>
                                     </button>
                                 </div>
                                 {{ csrf_field() }}
@@ -142,6 +146,19 @@
     <script src="{{ asset('js/particles.js') }}"></script>
 
     <script>
+        $(document).ready(function() {
+            $("#submitText").on("click", function() {
+                $("#fuseBtnText").text("Generating poem...");
+                $("#fuseBtnText").attr("disabled", true);
+                $("#fuseBtnFile").attr("disabled", true);
+            })
+
+            $("#submitFile").on("click", function() {
+                $("#fuseBtnFile").text("Generating poem...");
+                $("#fuseBtnText").attr("disabled", true);
+                $("#fuseBtnFile").attr("disabled", true);
+            })
+        })
         //----- jQuery Javascript---- //
         // get the select box element and store it as '$selecBox'
         var $selectbox = $("#selectbox");

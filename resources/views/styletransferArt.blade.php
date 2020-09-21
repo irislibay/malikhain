@@ -155,27 +155,41 @@
                                     <span id="fuseBtnText" class="btn-text">Fuse my artwork!</span>
                                 </button>
                             </div>
-
-                            <div class="spinner hide">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
                         </div>
                         <div class="card-footer bg-transparent">
-                                <div id="output-iteration" class="carousel slide" data-ride="carousel" style="border-radius: 10px; overflow: hidden;">
+                                <div id="output-iteration" class="carousel slide" data-ride="carousel" style="border-radius: 10px; overflow: hidden; margin-bottom: 15px;">
                                 </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </form>
+        <div class="row text-dark text-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
+                <div class="card shadow bg-transparent border border-white text-white mb-5">
+                    <div class="card-footer bg-transparent">
+                        <button class="dlimg btn btn-success btn-md">
+                            Download
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 @endsection
 
 @section('scripts')
+
+    <script src="js/FileSaver.js">
+        let btnDownload = document.querySelector(".dlimg");
+
+        btnDownload.addEventListener('click', () => {
+            let imagePath = "{{ config('app.malikhain_flask_api_base_url').'/nst/files/' }}";
+            let filename = "{{ $uploaded_filename }}-500.png";
+            saveAs(imagePath, fileName);
+        });
+    </script>
 
     <script>
         let filename = "{{ $uploaded_filename }}";
