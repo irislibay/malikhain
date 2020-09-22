@@ -30,7 +30,7 @@ class FileController extends Controller
         //     $content = FacadeFile::get('output_poem/'.$poem['basename']);
         //     array_push($poems, $content);
         // }
-        
+
         $poems = Poem::all();
 
         $images = File::all();
@@ -46,7 +46,11 @@ class FileController extends Controller
     public function create()
     {
         $file = File::latest()->first();
-        
+
+        if ($file === null) {
+            return view('styletransferArt', ['uploaded_filename' => '']);
+        }
+
         $original_filename = explode('.', $file->filename)[0];
         $filename = explode('-', $original_filename)[0];
 

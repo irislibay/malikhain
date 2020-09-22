@@ -42,18 +42,24 @@
                             <div class="text-white mt-5" style="position: absolute; z-index: -1;">
                                 <p style="margin-top: 10px;">
                                     {!! $poem->text  !!}
-                                </p>  
+                                </p>
                             </div>
-                            <button class="button" data-modal-target="{{ '#modal'.$loop->index }}" style="margin-top: 200px; margin-left: 10px; margin-right: 10px;">View more</button>
+                            <button type="button" class="button" data-toggle="modal" data-target="{{ '#modal'.$loop->index }}" style="margin-top: 200px; margin-left: 10px; margin-right: 10px;">View more</button>
                         </div>
                     </div>
-                    <div id="{{ 'modal'.$loop->index }}" class="modal">
-                        <div class="modal-header">
-                            <div class="title-modal">Generated Output</div>
-                            <button data-close-button class="close-button">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            {!! $poem->text  !!}
+                    <div id="{{ 'modal'.$loop->index }}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content" style="background: linear-gradient(135deg, #845EC2, #FFC75F);">
+                                <div class="modal-header">
+                                    <div class="title-modal">Generated Output</div>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    {!! $poem->text  !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="overlay" style="z-index: 3;"></div>
@@ -64,42 +70,4 @@
 @endsection
 
 @section('scripts')
-    <script defer>
-        const openModalButtons = document.querySelectorAll('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        const overlay = document.getElementById('overlay')
-
-        openModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = document.querySelector(button.dataset.modalTarget)
-            openModal(modal)
-        })
-        })
-
-        overlay.addEventListener('click', () => {
-        const modals = document.querySelectorAll('.modal.active')
-        modals.forEach(modal => {
-            closeModal(modal)
-        })
-        })
-
-        closeModalButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const modal = button.closest('.modal')
-            closeModal(modal)
-        })
-        })
-
-        function openModal(modal) {
-        if (modal == null) return
-        modal.classList.add('active')
-        overlay.classList.add('active')
-        }
-
-        function closeModal(modal) {
-        if (modal == null) return
-        modal.classList.remove('active')
-        overlay.classList.remove('active')
-        }
-    </script>
 @endsection
