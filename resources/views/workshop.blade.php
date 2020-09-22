@@ -40,7 +40,7 @@
                 </p>
 
                 <p>
-                    Upload your digital artwork (.jpg, .png) and fuse it with a classical Filipino painter's work
+                    Upload your digital artwork (.jpg, .png) and fuse it with a Filipino master painter's work
                 </p>
 
                 <a href="/workshop/styletransferArt"

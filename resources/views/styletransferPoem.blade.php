@@ -189,14 +189,14 @@
         }
 
         function download() {
-            var a = document.body.appendChild(
-               document.createElement("a")
-            );
-        //    const regex = /(< ?br ?>)/g;
-           a.download = "newfile.txt";
-           const text = document.getElementById("output").innerHTML.replaceAll("<br>", "\n");
-           a.href = "data:text/html," + text;
-           a.click(); //Trigger a click on the element
+        var a = document.body.appendChild(
+            document.createElement("a")
+        );
+        var textToWrite = document.getElementById("output").innerText;
+        a.download = "poemOutput.txt"; 
+        textToWrite = textToWrite.replace(/\n/g, "%0D%0A");
+        a.href = "data:text/plain," + textToWrite;
+        a.click();
         }
     </script>
 

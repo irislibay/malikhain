@@ -168,9 +168,9 @@
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
                 <div class="card shadow bg-transparent border border-white text-white mb-5">
                     <div class="card-footer bg-transparent">
-                        <button class="dlimg btn btn-success btn-md">
+                        <a href="/workshop/styletransferArt/{{ $uploaded_filename }}-500.png" class="btn btn-success btn-md">
                             Download
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -180,17 +180,6 @@
 @endsection
 
 @section('scripts')
-
-    <script src="js/FileSaver.js">
-        let btnDownload = document.querySelector(".dlimg");
-
-        btnDownload.addEventListener('click', () => {
-            let imagePath = "{{ config('app.malikhain_flask_api_base_url').'/nst/files/' }}";
-            let filename = "{{ $uploaded_filename }}-500.png";
-            saveAs(imagePath, fileName);
-        });
-    </script>
-
     <script>
         let filename = "{{ $uploaded_filename }}";
 

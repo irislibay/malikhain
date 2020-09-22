@@ -18,11 +18,11 @@
                     </p>
 
                     <p class="h5 mt-3" data-aos="flip-up">
-                        <strong class=" h4 text-white font-weight-light" style="font-family: 'Megrim', cursive">malikhain</strong> is a web application that creates a fusion of your own masterpiece
+                        <strong class=" h4 text-white font-weight-light" style="font-family: 'Megrim', cursive">malikhain</strong> is an Artificial Intelligence that fuses your own masterpiece
                     </p>
 
                     <p class="h5 mt-3" data-aos="flip-up">
-                        and a classic Filipino artist's masterpiece using Deep Artificial Networks.
+                        and a classic Filipino artist's masterpiece using Artificial Intelligence.
                     </p>
 
                     <a href="{{ route('workshop') }}"

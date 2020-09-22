@@ -52,6 +52,15 @@ class FileController extends Controller
         return view('styletransferArt', ['uploaded_filename' => $filename]);
     }
 
+    public function download($name)
+    {
+        $tempName = 'imageOutput.png';
+        $file_path = config('app.malikhain_flask_api_base_url').'/nst/files/'.$name;
+        $tempImage = tempnam(sys_get_temp_dir(), $tempName);
+        copy($file_path, $tempImage);
+        return response()->download($tempImage, $tempName);
+    }
+
     /**
      * Store a newly created resource in storage.
      *
