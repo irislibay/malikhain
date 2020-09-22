@@ -46,10 +46,13 @@ class FileController extends Controller
     public function create()
     {
         $file = File::latest()->first();
+        
         $original_filename = explode('.', $file->filename)[0];
         $filename = explode('-', $original_filename)[0];
 
-        return view('styletransferArt', ['uploaded_filename' => $filename]);
+        $master = '/ArtistPage/'.str_replace(' ', '', explode('/', explode('/styles/', $file->styleimg)[1])[0]);
+
+        return view('styletransferArt', ['uploaded_filename' => $filename, 'master' => $master]);
     }
 
     public function download($name)

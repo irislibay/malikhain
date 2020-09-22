@@ -128,7 +128,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col"></div>
-                            <a href="#link" class="btn btn-success btn-sm" role="button">Profile</a>
+                            <a href="#link" class="btn btn-success btn-sm" role="button">Know More</a>
                             <button onclick="download()" class="col btn btn-success btn-sm" id="downloadLink">
                                 Download
                             </button>

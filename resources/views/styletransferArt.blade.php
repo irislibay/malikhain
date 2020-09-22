@@ -159,22 +159,17 @@
                         <div class="card-footer bg-transparent">
                                 <div id="output-iteration" class="carousel slide" data-ride="carousel" style="border-radius: 10px; overflow: hidden; margin-bottom: 15px;">
                                 </div>
+                                <a href="/workshop/styletransferArt/{{ $uploaded_filename }}-500.png" class="btn btn-success btn-md">
+                                    Download
+                                </a>
+                                <a href="{{ $master }}" class="btn btn-success btn-md">
+                                    Know More
+                                </a>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-        <div class="row text-dark text-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 m-auto">
-                <div class="card shadow bg-transparent border border-white text-white mb-5">
-                    <div class="card-footer bg-transparent">
-                        <a href="/workshop/styletransferArt/{{ $uploaded_filename }}-500.png" class="btn btn-success btn-md">
-                            Download
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </div>
 @endsection

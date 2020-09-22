@@ -30,7 +30,7 @@
                 @endforeach
 
                 @foreach($poems as $poem)
-                    <a class="card james-transparent" href="#!">
+                    <div class="card james-transparent">
                         <div class="front" style="background: linear-gradient(135deg, #845EC2, #FFC75F);">
                             <div class="text-white mt-5" >
                                 <p style="margin-top: 10px; text-align: center;">
@@ -44,9 +44,9 @@
                                     {!! $poem->text  !!}
                                 </p>  
                             </div>
-                            <button class="button" data-modal-target="{{ '#modal'.$loop->index }}" style="margin-top: 200px; margin-left: 10px; margin-right: 10px;">Know more</button>
+                            <button class="button" data-modal-target="{{ '#modal'.$loop->index }}" style="margin-top: 200px; margin-left: 10px; margin-right: 10px;">View more</button>
                         </div>
-                    </a>
+                    </div>
                     <div id="{{ 'modal'.$loop->index }}" class="modal">
                         <div class="modal-header">
                             <div class="title-modal">Generated Output</div>
