@@ -1,4 +1,4 @@
-## Malikhain
+#Malikhain
 
 An undergraduate thesis by Iris Libay and James Baladjay. 
 
@@ -11,6 +11,10 @@ made w/ Laravel and Flask.
 Special thanks to: Czeide Avanzado, Xandra Ureta, Jesus Castro, & Cyrus Vatandoost for contributing to this project.
 
 
-How To Run: https://tinyurl.com/MALIKHAIN-TechnicalManual
+## How To Run
+
+Technical Manual: https://tinyurl.com/MALIKHAIN-TechnicalManual
+
+## How to Use
 
 User Manual: https://tinyurl.com/MALIKHAIN-UserManual
